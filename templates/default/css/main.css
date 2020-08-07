@@ -279,7 +279,7 @@ label small {
 }
 /************** BOOKING SEARCH ***************/
 .booking-search {
-    padding: 0 8px;
+    padding: 0 28px;
 }
 .booking-search [class^="col-"] {
     padding-left: 8px;
@@ -299,7 +299,7 @@ label small {
     }
 }
 #search-home {
-    padding: 7px 12px;
+    padding: 7px 42px;
     text-align: center;
     border-radius: 4px;
 }

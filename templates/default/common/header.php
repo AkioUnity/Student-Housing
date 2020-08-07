@@ -219,28 +219,28 @@ if(ENABLE_COOKIES_NOTICE == 1 && !isset($_COOKIE['cookies_enabled'])){ ?>
                             <?php
                         }
                     } ?>
-                    <li class="primary btn-nav">
-                        <div class="dropdown">
-                            <a class="firstLevel dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fas fa-fw fa-search"></i> <span class="caret"></span>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                                <li>
-                                    <?php $csrf_token = get_token("search"); ?>
-
-                                    <form method="post" action="<?php echo DOCBASE.$sys_pages['search']['alias']; ?>" class="form-inline">
-                                        <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
-                                        <div class="input-group searchWrapper">
-                                            <input type="text" class="form-control" name="global-search" placeholder="<?php echo $texts['SEARCH']; ?>">
-                                            <span class="input-group-btn">
-                                                <button type="submit" class="btn btn-primary" name="send"><i class="fas fa-fw fa-search"></i></button>
-                                            </span>
-                                        </div>
-                                    </form>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+<!--                    <li class="primary btn-nav">-->
+<!--                        <div class="dropdown">-->
+<!--                            <a class="firstLevel dropdown-toggle" data-toggle="dropdown" href="#">-->
+<!--                                <i class="fas fa-fw fa-search"></i> <span class="caret"></span>-->
+<!--                            </a>-->
+<!--                            <ul class="dropdown-menu dropdown-menu-right" role="menu">-->
+<!--                                <li>-->
+<!--                                    --><?php //$csrf_token = get_token("search"); ?>
+<!---->
+<!--                                    <form method="post" action="--><?php //echo DOCBASE.$sys_pages['search']['alias']; ?><!--" class="form-inline">-->
+<!--                                        <input type="hidden" name="csrf_token" value="--><?php //echo $csrf_token; ?><!--">-->
+<!--                                        <div class="input-group searchWrapper">-->
+<!--                                            <input type="text" class="form-control" name="global-search" placeholder="--><?php //echo $texts['SEARCH']; ?><!--">-->
+<!--                                            <span class="input-group-btn">-->
+<!--                                                <button type="submit" class="btn btn-primary" name="send"><i class="fas fa-fw fa-search"></i></button>-->
+<!--                                            </span>-->
+<!--                                        </div>-->
+<!--                                    </form>-->
+<!--                                </li>-->
+<!--                            </ul>-->
+<!--                        </div>-->
+<!--                    </li>-->
                 </ul>
                 <div id="user-popup" class="white-popup-block mfp-hide">
                     <div class="fluid-container">

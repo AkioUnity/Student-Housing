@@ -1,9 +1,9 @@
 <?php
 define('SITE_TITLE', 'HRH Student');
-define('TIME_ZONE', 'Europe/London');
+define('TIME_ZONE', 'America/Cayman');
 define('DATE_FORMAT', '%F');
-define('TIME_FORMAT', '%I:%M %P');
-define('CURRENCY_ENABLED', '1');
+define('TIME_FORMAT', '%I:%M%P');
+define('CURRENCY_ENABLED', '0');
 define('CURRENCY_POS', 'before'); // before or after
 define('LANG_ENABLED', '0');
 define('ADMIN_LANG_FILE', 'en.ini');
@@ -11,11 +11,11 @@ define('ENABLE_COOKIES_NOTICE', '1');
 define('MAINTENANCE_MODE', '0');
 define('MAINTENANCE_MSG', '<h1><i class=\"fa fa-rocket\"></i> Coming soon...</h1><p>We are sorry, our website is down for maintenance.</p>');
 define('TEMPLATE', 'default');
-define('OWNER', '');
+define('OWNER', 'Dormitory Housing in Wisconsin Dells');
 define('EMAIL', 'muellerUnity@gmail.com');
-define('ADDRESS', '');
-define('PHONE', '');
-define('MOBILE', '');
+define('ADDRESS', '200 West Hiawatha Drive, Wisconsin Dells, WI, USA');
+define('PHONE', '(608) 253-0200');
+define('MOBILE', '(608) 253-0200');
 define('FAX', '');
 define('DB_NAME', 'hrh_student');
 define('DB_HOST', 'localhost');

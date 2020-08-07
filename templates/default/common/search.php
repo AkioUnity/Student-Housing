@@ -19,7 +19,7 @@ $to_date = (isset($_SESSION['to_date'])) ? $_SESSION['to_date'] : date('j/m/Y', 
         <?php
     } ?>
     <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="form-group">
                 <label class="sr-only" for="from"></label>
                 <div class="input-group">
@@ -29,7 +29,7 @@ $to_date = (isset($_SESSION['to_date'])) ? $_SESSION['to_date'] : date('j/m/Y', 
                 <div class="field-notice" rel="from_date"></div>
             </div>
         </div>
-        <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="col-md-4 col-sm-6 col-xs-12">
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-addon"><i class="fas fa-fw fa-calendar"></i> <?php echo $texts['CHECK_OUT']; ?></div>
@@ -52,20 +52,20 @@ $to_date = (isset($_SESSION['to_date'])) ? $_SESSION['to_date'] : date('j/m/Y', 
                 </div>
             </div>
         </div>
-        <div class="col-md-2 col-sm-6 col-xs-6">
-            <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="fas fa-fw fa-male"></i> <?php echo $texts['CHILDREN']; ?></div>
-                    <select name="num_children" class="selectpicker form-control">
-                        <?php
-                        for($i = 0; $i <= $max_children_search; $i++){
-                            $select = ($_SESSION['num_children'] == $i) ? ' selected="selected"' : '';
-                            echo '<option value="'.$i.'"'.$select.'>'.$i.'</option>';
-                        } ?>
-                    </select>
-                </div>
-            </div>
-        </div>
+<!--        <div class="col-md-2 col-sm-6 col-xs-6">-->
+<!--            <div class="form-group">-->
+<!--                <div class="input-group">-->
+<!--                    <div class="input-group-addon"><i class="fas fa-fw fa-male"></i> --><?php //echo $texts['CHILDREN']; ?><!--</div>-->
+<!--                    <select name="num_children" class="selectpicker form-control">-->
+<!--                        --><?php
+//                        for($i = 0; $i <= $max_children_search; $i++){
+//                            $select = ($_SESSION['num_children'] == $i) ? ' selected="selected"' : '';
+//                            echo '<option value="'.$i.'"'.$select.'>'.$i.'</option>';
+//                        } ?>
+<!--                    </select>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
         <div class="col-md-2 col-sm-12 col-xs-12">
             <div class="form-group">
                 <button class="btn btn-block btn-primary" type="submit" name="check_availabilities"><i class="fas fa-fw fa-search"></i> <?php echo $texts['CHECK']; ?></button>

@@ -1,4 +1,4 @@
--- SQL SCRIPT FOR THE DATABASE OF PANDAO CMS / PANDA RESORT
+-- SQL SCRIPT FOR THE DATABASE OF RESORT
 
 -- **** Values to replace ****
 -- Database name:                   MY_DATABASE

@@ -1,6 +1,6 @@
 <?php
 /**
- * Common library of usefull functions for Pandao CMS
+ * Common library of usefull functions for CMS
  */
 class DB extends PDO
 {

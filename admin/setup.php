@@ -47,7 +47,7 @@ if(is_file($config_file)){
 
 if($db !== false && db_table_exists($db, "pm_%") === true){
     $installed = true;
-    $_SESSION['msg_notice'][] = "It seems that Pandao CMS is already installed. Remove your former tables from your database to reinstall it <a class=\"btn btn-default\" href=\"login.php\">Log in</a>";
+    $_SESSION['msg_notice'][] = "It seems that Hiawatha CMS is already installed. Remove your former tables from your database to reinstall it <a class=\"btn btn-default\" href=\"login.php\">Log in</a>";
 }
 
 if(isset($_POST['install']) && !$installed){

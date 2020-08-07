@@ -1,6 +1,6 @@
 <?php
 /**
- * Common file for Pandao CMS
+ * Common file for CMS
  * gets the configuration values and defines the environment
  */
 if(!is_session_started()) session_start();
