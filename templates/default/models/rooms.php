@@ -1,4 +1,5 @@
 <?php
+return;
 $stylesheets[] = array("file" => DOCBASE."js/plugins/isotope/css/style.css", "media" => "all");
 $javascripts[] = DOCBASE."js/plugins/isotope/jquery.isotope.min.js";
 $javascripts[] = DOCBASE."js/plugins/isotope/jquery.isotope.sloppy-masonry.min.js";

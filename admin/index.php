@@ -1,4 +1,5 @@
 <?php
+return;
 define("ADMIN", true);
 require_once("../common/lib.php");
 require_once("../common/define.php");

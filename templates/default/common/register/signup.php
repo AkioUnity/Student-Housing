@@ -1,4 +1,5 @@
 <?php
+return;
 /**
  * Script called (Ajax) on login
  */

@@ -1,4 +1,5 @@
 <?php
+return;
 if(isset($_POST['book']) || (ENABLE_BOOKING_REQUESTS == 1 && isset($_POST['request']))){
 	
 	if(isset($_SESSION['book'])) unset($_SESSION['book']);

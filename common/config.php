@@ -12,7 +12,7 @@ define('MAINTENANCE_MODE', '0');
 define('MAINTENANCE_MSG', '<h1><i class=\"fa fa-rocket\"></i> Coming soon...</h1><p>We are sorry, our website is down for maintenance.</p>');
 define('TEMPLATE', 'default');
 define('OWNER', 'Dormitory Housing in Wisconsin Dells');
-define('EMAIL', 'muellerUnity@gmail.com');
+define('EMAIL', 'support@hiawatha.com');
 define('ADDRESS', '200 West Hiawatha Drive, Wisconsin Dells, WI, USA');
 define('PHONE', '(608) 253-0200');
 define('MOBILE', '(608) 253-0200');
