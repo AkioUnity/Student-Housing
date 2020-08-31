@@ -178,7 +178,7 @@ require(getFromTemplate('common/header.php', false)); ?>
                            
                             <div id="twitter" data-url="<?php echo $site_url; ?>" data-text="<?php echo $short_text; ?>" data-title="Tweet"></div>
                             <div id="facebook" data-url="<?php echo $site_url; ?>" data-text="<?php echo $short_text; ?>" data-title="Like"></div>
-                            <div id="googleplus" data-url="<?php echo $site_url; ?>" data-curl="<?php echo DOCBASE.'js/plugins/sharrre/sharrre.php'; ?>" data-text="<?php echo $short_text; ?>" data-title="+1"></div>
+<!--                            <div id="googleplus" data-url="--><?php //echo $site_url; ?><!--" data-curl="--><?php //echo DOCBASE.'js/plugins/sharrre/sharrre.php'; ?><!--" data-text="--><?php //echo $short_text; ?><!--" data-title="+1"></div>-->
                         </div>
                     </div>
                 </div>

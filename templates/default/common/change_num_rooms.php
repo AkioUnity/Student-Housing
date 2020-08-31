@@ -38,20 +38,7 @@ if(isset($db) && $db !== false){
                                     $response['html'] .= '
                                 </select>
                             </div>
-                        </div>
-                        <div class="col-md-3 col-lg-2 pt5 pb5">
-                            <div class="input-group input-group-sm">
-                                <div class="input-group-addon"><i class="fas fa-fw fa-male"></i> '.$texts['CHILDREN'].'</div>
-                                <select name="num_children['.$room_id.']['.$i.']" class="form-control sendAjaxForm selectpicker" data-extratarget="#booking-amount" data-action="'.getFromTemplate('common/change_num_people.php').'?index='.$i.'&id_room='.$room_id.'" data-target="#room-result-'.$room_id.'-'.$i.'">
-                                    <option value="0">-</option>';
-                                    for($j = 1; $j <= $max_children; $j++){
-                                        $response['html'] .= '<option value="'.$j.'">'.$j.'</option>';
-                                    }
-                                    $response['html'] .= '
-                                </select>
-                            </div>
-                            <div id="children-options-'.$room_id.'-'.$i.'"></div>
-                        </div>
+                        </div>                        
                         <div class="col-md-3 col-lg-5 pt5 pb5" id="room-result-'.$room_id.'-'.$i.'"></div>
                         <di class="clearfix"></di>
                     </div>';

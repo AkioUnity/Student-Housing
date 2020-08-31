@@ -1,5 +1,5 @@
 <?php
-die;
+
 if($article_alias == '') err404();
 
 if($article_id > 0){

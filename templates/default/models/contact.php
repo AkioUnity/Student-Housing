@@ -1,5 +1,5 @@
 <?php
-return;
+
 $msg_error = '';
 $msg_success = '';
 $field_notice = array();

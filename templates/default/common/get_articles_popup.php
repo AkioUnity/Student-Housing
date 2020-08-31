@@ -167,8 +167,7 @@ if(isset($db) && $db !== false){
                        
                         $html .= '
                         <div id="twitter" data-url="'.$site_url.'" data-text="'.$short_text.'" data-title="Tweet"></div>
-                        <div id="facebook" data-url="'.$site_url.'" data-text="'.$short_text.'" data-title="Like"></div>
-                        <div id="googleplus" data-url="'.$site_url.'" data-curl="'.DOCBASE.'js/plugins/sharrre/sharrre.php" data-text="'.$short_text.'" data-title="+1"></div>
+                        <div id="facebook" data-url="'.$site_url.'" data-text="'.$short_text.'" data-title="Like"></div>                        
                     </div>
                 </div>
             </div>

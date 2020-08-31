@@ -1,5 +1,5 @@
 <?php
-return;
+
 require(getFromTemplate("common/header.php", false)); ?>
 
 <section id="page">
