@@ -22,23 +22,23 @@ define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
 define('DB_USER', 'root');
 define('DB_PASS', 'djwth10');
-define('SENDER_EMAIL', '');
-define('SENDER_NAME', '');
-define('USE_SMTP', '0');
-define('SMTP_SECURITY', '');
-define('SMTP_AUTH', '0');
-define('SMTP_HOST', '');
-define('SMTP_USER', '');
-define('SMTP_PASS', '');
-define('SMTP_PORT', '25');
+define('SENDER_EMAIL', 'muellerUnity@gmail.com');
+define('SENDER_NAME', 'Holtz Builders &lt;support@hiawatha.com&gt;');
+define('USE_SMTP', '1');
+define('SMTP_SECURITY', 'ssl');
+define('SMTP_AUTH', '1');
+define('SMTP_HOST', 'smtp.gmail.com');
+define('SMTP_USER', 'muellerUnity@gmail.com');
+define('SMTP_PASS', 'wpdkrdjwth22');
+define('SMTP_PORT', '465');
 define('GMAPS_API_KEY', '');
 define('ANALYTICS_CODE', '');
 define('ADMIN_FOLDER', 'admin');
 define('CAPTCHA_PKEY', ''); // ReCAPTCHA public key
 define('CAPTCHA_SKEY', ''); // ReCAPTCHA secret key
 define('AUTOGEOLOCATE', '0'); // Change the currency according to the country (https required)
-define('PAYMENT_TYPE', 'arrival'); // 2checkout,paypal,check,arrival
-define('PAYPAL_EMAIL', '');
+define('PAYMENT_TYPE', 'paypal'); // 2checkout,paypal,check,arrival
+define('PAYPAL_EMAIL', 'bill@hiawatha.com');
 define('VENDOR_ID', ''); // 2Checkout.com account number
 define('SECRET_WORD', ''); // 2Checkout.com secret word
 define('PAYMENT_TEST_MODE', '1');

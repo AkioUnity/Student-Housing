@@ -1,5 +1,4 @@
 <?php
-return;
 if(!isset($_SESSION['book']) || count($_SESSION['book']) == 0){
     header('Location: '.DOCBASE.$sys_pages['booking']['alias']);
     exit();
