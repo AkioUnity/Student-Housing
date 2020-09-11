@@ -81,14 +81,7 @@ if(isset($_POST['mc_gross'])){
                                 if($result_room !== false && $db->last_row_count() > 0){
                                     foreach($result_room as $room){
                                         $room_content .= '<p><b>'.$room['title'].'</b><br>
-                                        '.($room['adults']+$room['children']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']+$room['children'])).': ';
-                                        if($room['adults'] > 0) $room_content .= $room['adults'].' '.getAltText($texts['ADULT'], $texts['ADULTS'], $room['adults']).' ';
-                                        if($room['children'] > 0){
-                                            $room_content .= $room['children'].' '.getAltText($texts['CHILD'], $texts['CHILDREN'], $room['children']).' ';
-                                            if(isset($room['child_age'])){
-                                                $room_content .= '('.implode(' '.$texts['YO'].', ', $room['child_age']).' '.$texts['YO'].')';
-                                            }
-                                        }
+                                        '.($room['adults']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults'])).': ';
                                         $room_content .= '<br>'.$texts['PRICE'].' : '.formatPrice($room['amount']*CURRENCY_RATE).'</p>';
                                     }
                                 }
@@ -98,9 +91,7 @@ if(isset($_POST['mc_gross'])){
                                 if($result_activity !== false && $db->last_row_count() > 0){
                                     foreach($result_activity as $activity){
                                         $activity_content .= '<p><b>'.$activity['title'].'</b> - '.$activity['duration'].' - '.strftime(DATE_FORMAT.' '.TIME_FORMAT, $activity['date']).'<br>
-                                        '.($activity['adults']+$activity['children']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($activity['adults']+$activity['children'])).': ';
-                                        if($activity['adults'] > 0) $activity_content .= $activity['adults'].' '.getAltText($texts['ADULT'], $texts['ADULTS'], $activity['adults']).' ';
-                                        if($activity['children'] > 0) $activity_content .= $activity['children'].' '.getAltText($texts['CHILD'], $texts['CHILDREN'], $activity['children']).' ';
+                                        '.($activity['adults']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($activity['adults'])).': ';
                                         $activity_content .= $texts['PRICE'].' : '.formatPrice($activity['amount']*CURRENCY_RATE).'</p>';
                                     }
                                 }
@@ -127,9 +118,7 @@ if(isset($_POST['mc_gross'])){
                                     '{Check_in}' => strftime(DATE_FORMAT, $row['from_date']),
                                     '{Check_out}' => strftime(DATE_FORMAT, $row['to_date']),
                                     '{num_nights}' => $row['nights'],
-                                    '{num_guests}' => ($row['adults']+$row['children']),
-                                    '{num_adults}' => $row['adults'],
-                                    '{num_children}' => $row['children'],
+                                    '{num_guests}' => ($row['adults']),
                                     '{rooms}' => $room_content,
                                     '{extra_services}' => $service_content,
                                     '{activities}' => $activity_content,
@@ -143,7 +132,7 @@ if(isset($_POST['mc_gross'])){
                                 ));
                                 
                                 if($mail !== false){
-                                    sendMail(EMAIL, OWNER, $mail['subject'], $mail['content'], $row['email'], $row['firstname'].' '.$row['lastname']);
+                                    sendMail(SENDER_EMAIL, OWNER, $mail['subject'], $mail['content'], $row['email'], $row['firstname'].' '.$row['lastname']);
                                     sendMail($row['email'], $row['firstname'].' '.$row['lastname'], $mail['subject'], $mail['content']);
                                 }
                             }

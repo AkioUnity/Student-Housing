@@ -376,10 +376,8 @@ function getBookingSummary($room_id = null, $index = null, $amount = 0, $availab
     if($total > 0){
         $html .= '
         <big><i class="fas fa-fw fa-tags"></i> <b>'.$num_rooms.'</b></big> '.getAltText($texts['ROOM'], $texts['ROOMS'], $num_rooms).' 
-        <big><i class="fas fa-fw fa-male"></i> <b>'.$persons.'</b></big> '.getAltText($texts['PERSON'], $texts['PERSONS'], $persons).'<i class="fas fa-fw fa-caret-right"></i>';
-                
-        if($num_adults > 0) $html .= ' <big><b>'.$num_adults.'</b></big> '.getAltText($texts['ADULT'], $texts['ADULTS'], $num_adults);
-        if($num_children > 0) $html .= ' / <big><b>'.$num_children.'</b></big> '.getAltText($texts['CHILD'], $texts['CHILDREN'], $num_children);
+        <big><i class="fas fa-fw fa-male"></i> <b>'.$persons.'</b></big> '.getAltText($texts['ADULT'], $texts['ADULTS'], $num_adults);
+//        if($num_children > 0) $html .= ' / <big><b>'.$num_children.'</b></big> '.getAltText($texts['CHILD'], $texts['CHILDREN'], $num_children);
         
         $html .= '
         <input type="hidden" name="adults" value="'.$num_adults.'">

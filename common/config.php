@@ -32,15 +32,14 @@ define('SMTP_USER', 'muellerUnity@gmail.com');
 define('SMTP_PASS', 'wpdkrdjwth22');
 define('SMTP_PORT', '465');
 define('GMAPS_API_KEY', '');
-define('ANALYTICS_CODE', '');
+define('ANALYTICS_CODE', '<!-- Global site tag (gtag.js) - Google Analytics --><script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-177516312-1\"></script><script>  window.dataLayer = window.dataLayer || [];  function gtag(){dataLayer.push(arguments);}  gtag(\'js\', new Date());  gtag(\'config\', \'UA-177516312-1\');</script>');
 define('ADMIN_FOLDER', 'admin');
 define('CAPTCHA_PKEY', ''); // ReCAPTCHA public key
 define('CAPTCHA_SKEY', ''); // ReCAPTCHA secret key
 define('AUTOGEOLOCATE', '0'); // Change the currency according to the country (https required)
-define('PAYMENT_TYPE', 'paypal'); // 2checkout,paypal,check,arrival
+define('PAYMENT_TYPE', '2checkout,paypal'); // 2checkout,paypal,check,arrival
 define('PAYPAL_EMAIL', 'bill@hiawatha.com');
-define('VENDOR_ID', ''); // 2Checkout.com account number
-define('SECRET_WORD', ''); // 2Checkout.com secret word
+
 define('PAYMENT_TEST_MODE', '1');
 define('ENABLE_DOWN_PAYMENT', '1');
 define('DOWN_PAYMENT_RATE', '30'); // %

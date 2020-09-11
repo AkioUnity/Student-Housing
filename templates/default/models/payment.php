@@ -266,8 +266,6 @@ if($handle){
  * CSS AND JAVASCRIPT USED IN THIS MODEL
  * ==============================================
  */
-if($payment_type == '2checkout')
-    $javascripts[] = 'https://www.2checkout.com/static/checkout/javascript/direct.min.js';
 
 require(getFromTemplate('common/header.php', false)); ?>
 
@@ -354,32 +352,59 @@ require(getFromTemplate('common/header.php', false)); ?>
                 </div>
                 <?php
             }elseif($payment_type == '2checkout'){ ?>
-                <div class="text-center">
-                    <?php echo $texts['PAYMENT_CARDS_NOTICE']; ?><br>
-                    <img src="<?php echo getFromTemplate('images/2checkout-cards.png'); ?>" alt="2Checkout.com" class="img-responsive mt10 mb30">
-                    <form action="https://<?php if(PAYMENT_TEST_MODE == 1) echo 'sandbox'; else echo 'www'; ?>.2checkout.com/checkout/purchase" method="post">
-                        <input type="hidden" name="sid" value="<?php echo VENDOR_ID; ?>">
-                        <input type="hidden" name="currency_code" value="<?php echo DEFAULT_CURRENCY_CODE; ?>">
-                        <input type="hidden" name="lang" value="<?php echo LANG_TAG; ?>">
-                        <input type="hidden" name="mode" value="2CO">
-                        <input type="hidden" name="merchant_order_id" value="<?php echo $_SESSION['tmp_book']['id']; ?>">
+<!--                credit card in payment.php-->
+            <div class="creditCardForm">
+                <div class="payment">
+                    <img src="<?php echo getFromTemplate('images/2checkout-cards.png'); ?>" alt="Credit Card" class="img-responsive mt10 mb30">
+                    <form action="<?php echo DOCBASE; ?>includes/payments/credit_card_notify.php" method="post">
+                        <input type="hidden" name="price" value="<?php echo str_replace(',', '.', $payed_amount); ?>">
+
                         <input type="hidden" name="li_0_type" value="product">
                         <input type="hidden" name="li_0_name" value="<?php echo addslashes(gmstrftime(DATE_FORMAT, $_SESSION['tmp_book']['from_date']).' > '.gmstrftime(DATE_FORMAT, $_SESSION['tmp_book']['to_date']).' - '.$_SESSION['tmp_book']['nights'].' '.$texts['NIGHTS'].' - '.($_SESSION['tmp_book']['adults']+$_SESSION['tmp_book']['children']).' '.$texts['PERSONS']); ?>">
-                        <input type="hidden" name="li_0_price" value="<?php echo str_replace(',', '.', $payed_amount); ?>">
-                        <input type="hidden" name="card_holder_name" value="<?php echo $_SESSION['book']['lastname'].' '.$_SESSION['book']['lastname']; ?>">
-                        <input type="hidden" name="street_address" value="<?php echo $_SESSION['book']['address']; ?>">
-                        <input type="hidden" name="street_address2" value="">
-                        <input type="hidden" name="city" value="<?php echo $_SESSION['book']['city']; ?>">
-                        <input type="hidden" name="state" value="">
-                        <input type="hidden" name="zip" value="<?php echo $_SESSION['book']['postcode']; ?>">
-                        <input type="hidden" name="country" value="<?php echo $_SESSION['book']['country']; ?>">
-                        <input type="hidden" name="email" value="<?php echo $_SESSION['book']['email']; ?>">
-                        <input type="hidden" name="phone" value="<?php echo $_SESSION['book']['phone']; ?>">
-                        <input type="hidden" name="x_receipt_link_url" value="<?php echo getUrl(true).DOCBASE.'includes/payments/2checkout_notify.php'; ?>">
-                        
-                        <button type="submit" name="submit" class="btn btn-primary btn-lg pull-right"><i class="fas fa-fw fa-credit-card"></i> <?php echo $texts['PAY']; ?></button>
+
+                        <div class="form-group" id="card-number-field">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" name="ccnumber" placeholder="" required="">
+                        </div>
+                        <div class="form-group CVV">
+                            <label data-toggle="tooltip" title=""
+                                   data-original-title="3 digits code on back side of the card">CVV </label>
+                            <input type="number" class="form-control" id="cvv" required="" name="cvv">
+                        </div>
+                        <div class="form-group" id="expiration-date">
+                            <label>Expiration Date</label>
+                            <select name="ccexpmm">
+                                <option value="01">January</option>
+                                <option value="02">February </option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select name="ccexpyy">
+                                <option value="20"> 2020</option>
+                                <option value="21"> 2021</option>
+                                <option value="22"> 2022</option>
+                                <option value="23"> 2023</option>
+                                <option value="24"> 2024</option>
+                                <option value="25"> 2025</option>
+                                <option value="26"> 2026</option>
+                                <option value="27"> 2027</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="credit_cards">
+                            <button type="submit" name="submit" class="btn btn-primary btn-lg pull-right" id="confirm-purchase"><i class="fas fa-fw fa-credit-card"></i> <?php echo $texts['PAY']; ?></button>
+                        </div>
+
                     </form>
                 </div>
+            </div>
                 <?php
             }elseif($payment_type == 'braintree'){ ?>
                 <div class="text-center">
@@ -437,7 +462,7 @@ require(getFromTemplate('common/header.php', false)); ?>
                                                 <?php
                                             break;
                                             case '2checkout': ?>
-                                                <i class="fas fa-fw fa-credit-card"></i><br>2Checkout.com
+                                                <i class="fas fa-fw fa-credit-card"></i><br>Credit Card
                                                 <?php
                                             break;
                                             case 'braintree': ?>

@@ -76,7 +76,7 @@
 				<option value="check">[BY_CHECK]</option>
 				<option value="transfer">[BANK_TRANSFER]</option>
 				<option value="paypal">PayPal</option>
-                <option value="2checkout">2Checkout.com</option>
+                <option value="2checkout">CreditCard</option>
                 <option value="braintree">Braintree</option>
                 <option value="razorpay">Razorpay</option>
 			</options>
@@ -132,7 +132,7 @@
                     <option value="check">[BY_CHECK]</option>
                     <option value="transfer">[BANK_TRANSFER]</option>
                     <option value="paypal">PayPal</option>
-                    <option value="2checkout">2Checkout.com</option>
+                    <option value="2checkout">CreditCard</option>
                     <option value="braintree">Braintree</option>
 					<option value="razorpay">Razorpay</option>
                 </options>

@@ -5,6 +5,7 @@ if(!isset($_SESSION['book']) || count($_SESSION['book']) == 0){
 }else
     $_SESSION['book']['step'] = 'details';
 
+//details.php
 $msg_error = '';
 $msg_success = '';
 $field_notice = array();
@@ -136,9 +137,7 @@ if(isset($_POST['book']) || (ENABLE_BOOKING_REQUESTS == 1 && isset($_POST['reque
                 foreach($_SESSION['book']['rooms'] as $id_room => $rooms){
                     foreach($rooms as $index => $room){
                         $room_content .= '<p><b>'.$room['title'].'</b><br>
-                        '.($room['adults']+$room['children']).' '.$texts['PERSONS'].' - 
-                        '.$texts['ADULTS'].': '.$room['adults'].' / 
-                        '.$texts['CHILDREN'].': '.$room['children'].'<br>
+                        '.($room['adults']).' '.$texts['PERSONS'].'<br>
                         '.$texts['PRICE'].' : '.formatPrice($room['amount']*CURRENCY_RATE).'</p>';
                     }
                 }
@@ -154,9 +153,7 @@ if(isset($_POST['book']) || (ENABLE_BOOKING_REQUESTS == 1 && isset($_POST['reque
             if(isset($_SESSION['book']['activities']) && count($_SESSION['book']['activities']) > 0){
                 foreach($_SESSION['book']['activities'] as $id_activity => $activity){
                     $activity_content .= '<p><b>'.$activity['title'].'</b> - '.$activity['duration'].' - '.gmstrftime(DATE_FORMAT.' '.TIME_FORMAT, $activity['session_date']).'<br>
-                    '.($activity['adults']+$activity['children']).' '.$texts['PERSONS'].' - 
-                    '.$texts['ADULTS'].': '.$activity['adults'].' / 
-                    '.$texts['CHILDREN'].': '.$activity['children'].'<br>
+                    '.($activity['adults']).' '.$texts['PERSONS'].'<br>
                     '.$texts['PRICE'].' : '.formatPrice($activity['amount']*CURRENCY_RATE).'</p>';
                 }
             }
@@ -174,10 +171,8 @@ if(isset($_POST['book']) || (ENABLE_BOOKING_REQUESTS == 1 && isset($_POST['reque
                 '{email}' => $_SESSION['book']['email'],
                 '{Check_in}' => gmstrftime(DATE_FORMAT, $_SESSION['book']['from_date']),
                 '{Check_out}' => gmstrftime(DATE_FORMAT, $_SESSION['book']['to_date']),
-                '{num_nights}' => $_SESSION['book']['nights'],
-                '{num_guests}' => ($_SESSION['book']['adults']+$_SESSION['book']['children']),
-                '{num_adults}' => $_SESSION['book']['adults'],
-                '{num_children}' => $_SESSION['book']['children'],
+                '{num_days}' => $_SESSION['book']['nights'],
+                '{num_guests}' => ($_SESSION['book']['adults']),
                 '{rooms}' => $room_content,
                 '{extra_services}' => $service_content,
                 '{activities}' => $activity_content,
@@ -463,9 +458,7 @@ require(getFromTemplate('common/header.php', false)); ?>
 												<p>
 													<?php
 													echo '<strong>'.$room['title'].'</strong><br>
-													'.($room['adults']+$room['children']).' '.$texts['PERSONS'].' - 
-													'.$texts['ADULTS'].': '.$room['adults'].' / 
-													'.$texts['CHILDREN'].': '.$room['children']; ?>
+													'.$texts['ADULTS'].': '.$room['adults']; ?>
 												</p>
 											</div>
 											<div class="col-md-6">

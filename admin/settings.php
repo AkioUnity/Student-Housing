@@ -83,8 +83,7 @@ if($action == 'edit_settings'){
         
         $config_tmp['payment_type'] = isset($_POST['payment_type']) ? implode(',', $_POST['payment_type']) : '';
         $config_tmp['paypal_email'] = htmlspecialchars($_POST['paypal_email'], ENT_QUOTES, 'UTF-8');
-        $config_tmp['vendor_id'] = htmlspecialchars($_POST['vendor_id'], ENT_QUOTES, 'UTF-8');
-        $config_tmp['secret_word'] = htmlspecialchars($_POST['secret_word'], ENT_QUOTES, 'UTF-8');
+
         $config_tmp['payment_test_mode'] = isset($_POST['payment_test_mode']) ? htmlspecialchars($_POST['payment_test_mode'], ENT_QUOTES, 'UTF-8') : 0;
         $config_tmp['enable_down_payment'] = isset($_POST['enable_down_payment']) ? htmlspecialchars($_POST['enable_down_payment'], ENT_QUOTES, 'UTF-8') : 0;
         $config_tmp['down_payment_rate'] = htmlspecialchars($_POST['down_payment_rate'], ENT_QUOTES, 'UTF-8');
@@ -144,12 +143,7 @@ if($action == 'edit_settings'){
             
             if(strpos($config_tmp['payment_type'], 'paypal') && ($config_tmp['paypal_email'] == '' || !preg_match('/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$/i', $config_tmp['paypal_email'])))
                 $field_notice['paypal_email'] = $texts['REQUIRED_FIELD'];
-            
-            if(strpos($config_tmp['payment_type'], 'cards')){
-                if($config_tmp['vendor_id'] == '') $field_notice['vendor_id'] = $texts['REQUIRED_FIELD'];
-                if($config_tmp['secret_word'] == '') $field_notice['secret_word'] = $texts['REQUIRED_FIELD'];
-            }
-            
+
             if(strpos($config_tmp['payment_type'], 'braintree')){
                 if($config_tmp['braintree_merchant_id'] == '') $field_notice['braintree_merchant_id'] = $texts['REQUIRED_FIELD'];
                 if($config_tmp['braintree_public_key'] == '') $field_notice['braintree_public_key'] = $texts['REQUIRED_FIELD'];
@@ -309,8 +303,7 @@ $config_tmp['captcha_skey'] = CAPTCHA_SKEY;
 $config_tmp['autogeolocate'] = AUTOGEOLOCATE;
 $config_tmp['payment_type'] = PAYMENT_TYPE;
 $config_tmp['paypal_email'] = PAYPAL_EMAIL;
-$config_tmp['vendor_id'] = VENDOR_ID;
-$config_tmp['secret_word'] = SECRET_WORD;
+
 $config_tmp['payment_test_mode'] = PAYMENT_TEST_MODE;
 $config_tmp['enable_down_payment'] = ENABLE_DOWN_PAYMENT;
 $config_tmp['down_payment_rate'] = DOWN_PAYMENT_RATE;
@@ -1361,7 +1354,7 @@ $csrf_token = get_token('settings'); ?>
                                                         <div class="form-inline">
                                                             <?php
                                                             $payment_type = array_map("trim", explode(",", $config_tmp['payment_type'])); ?>
-                                                            <input type="checkbox" name="payment_type[]" value="2checkout"<?php if(in_array('2checkout', $payment_type)) echo ' checked="checked"'; ?>> 2Checkout.com (credit cards)
+                                                            <input type="checkbox" name="payment_type[]" value="2checkout"<?php if(in_array('2checkout', $payment_type)) echo ' checked="checked"'; ?>> Credit Card
                                                             <input type="checkbox" name="payment_type[]" value="paypal"<?php if(in_array('paypal', $payment_type)) echo ' checked="checked"'; ?>> PayPal 
                                                             <input type="checkbox" name="payment_type[]" value="check"<?php if(in_array('check', $payment_type)) echo ' checked="checked"'; ?>> Check 
                                                             <input type="checkbox" name="payment_type[]" value="arrival"<?php if(in_array('arrival', $payment_type)) echo ' checked="checked"'; ?>> On arrival 
@@ -1392,43 +1385,7 @@ $csrf_token = get_token('settings'); ?>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row mb10">
-											<div class="col-lg-12">
-												<p><big><b>2Checkout.com</b></big></p>
-												<hr class="mt0 mb0">
-											</div>
-										</div>
-                                        <div class="row mb10">
-                                            <div class="col-md-8">
-                                                <div class="row">
-                                                    <label class="col-md-3 control-label">
-                                                        <?php echo $texts['VENDOR_ID']; ?>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control" type="text" value="<?php echo $config_tmp['vendor_id']; ?>" name="vendor_id">
-                                                        <div class="field-notice" rel="vendor_id"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="pt5 pb5 bg-info text-info">
-                                                    <i class="fas fa-fw fa-info"></i> <?php echo $texts['VENDOR_ID_NOTICE']; ?>
-                                                </div>
-                                            </div>
-                                        </div>
-										<div class="row mb10">
-											<div class="col-md-8">
-												<div class="row">
-													<label class="col-md-3 control-label">
-														<?php echo $texts['SECRET_WORD']; ?>
-													</label>
-													<div class="col-md-8">
-														<input class="form-control" type="text" value="<?php echo $config_tmp['secret_word']; ?>" name="secret_word">
-														<div class="field-notice" rel="secret_word"></div>
-													</div>
-												</div>
-											</div>
-										</div>
+
                                         <div class="row mb10">
 											<div class="col-lg-12">
 												<p><big><b>Braintree</b></big></p>

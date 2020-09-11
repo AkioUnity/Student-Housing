@@ -62,13 +62,11 @@ require(getFromTemplate('common/header.php', false)); ?>
                 <div class="clearfix mb20"><?php echo $page['text']; ?></div>
                 <?php
             } ?>
-            
+<!--            summary.php-->
             <form method="post" action="<?php echo DOCBASE.$sys_pages['payment']['alias']; ?>">
-            
-                <?php
-                echo '
                 <table class="table table-responsive table-bordered">
-                    <tr>
+                <?php
+                echo '<tr>
                         <th width="50%">'.$texts['BOOKING_DETAILS'].'</th>
                         <th width="50%">'.$texts['BILLING_ADDRESS'].'</th>
                     </tr>
@@ -78,9 +76,7 @@ require(getFromTemplate('common/header.php', false)); ?>
 								echo $texts['CHECK_IN'].' <strong>'.gmstrftime(DATE_FORMAT, $_SESSION['book']['from_date']).'</strong><br>
 								'.$texts['CHECK_OUT'].' <strong>'.gmstrftime(DATE_FORMAT, $_SESSION['book']['to_date']).'</strong><br>
 								<strong>'.$_SESSION['book']['nights'].'</strong> '.getAltText($texts['NIGHT'], $texts['NIGHTS'], $_SESSION['book']['nights']).'<br>
-								<strong>'.($_SESSION['book']['adults']+$_SESSION['book']['children']).'</strong> '.getAltText($texts['PERSON'], $texts['PERSONS'], ($_SESSION['book']['adults']+$_SESSION['book']['children'])).' - 
-								'.getAltText($texts['ADULT'], $texts['ADULTS'], $_SESSION['book']['adults']).': <strong>'.$_SESSION['book']['adults'].'</strong> / 
-								'.getAltText($texts['CHILD'], $texts['CHILDREN'], $_SESSION['book']['children']).': <strong>'.$_SESSION['book']['children'].'</strong>';
+								<strong>'.($_SESSION['book']['adults']+$_SESSION['book']['children']).'</strong> '.getAltText($texts['PERSON'], $texts['PERSONS'], ($_SESSION['book']['adults']+$_SESSION['book']['children']));
 								if($_SESSION['book']['comments'] != '') echo '<p><b>'.$texts['COMMENTS'].'</b><br>'.nl2br($_SESSION['book']['comments']).'</p>';
 							}
                             echo '
@@ -111,14 +107,7 @@ require(getFromTemplate('common/header.php', false)); ?>
                                 '<tr>
                                     <td>'.$room['title'].'</td>
                                     <td>
-                                        '.($room['adults']+$room['children']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']+$room['children'])).': ';
-                                        if($room['adults'] > 0) echo $room['adults'].' '.getAltText($texts['ADULT'], $texts['ADULTS'], $room['adults']).' ';
-                                        if($room['children'] > 0){
-                                            echo $room['children'].' '.getAltText($texts['CHILD'], $texts['CHILDREN'], $room['children']).' ';
-                                            if(isset($room['child_age'])){
-                                                echo '('.implode(' '.$texts['YO'].', ', $room['child_age']).' '.$texts['YO'].')';
-                                            }
-                                        }
+                                        '.($room['adults']+$room['children']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']+$room['children']));
                                         echo '
                                     </td>
                                     <td class="text-right" width="15%">'.formatPrice($room['amount']*CURRENCY_RATE).'</td>
@@ -229,10 +218,8 @@ require(getFromTemplate('common/header.php', false)); ?>
                             <th class="text-right">'.$texts['DOWN_PAYMENT'].' ('.$texts['INCL_TAX'].')</th>
                             <td class="text-right" width="15%"><b>'.formatPrice($_SESSION['book']['down_payment']*CURRENCY_RATE).'</b></td>
                         </tr>';
-                    }
-                    echo '
-                </table>'; ?>
-                
+                    } ?>
+                </table>
                 <a class="btn btn-default btn-lg pull-left" href="<?php echo DOCBASE.$sys_pages['details']['alias']; ?>"><i class="fas fa-fw fa-angle-left"></i> <?php echo $texts['PREVIOUS_STEP']; ?></a>
                 <button type="submit" name="confirm_booking" class="btn btn-primary btn-lg pull-right"><?php echo $texts['CONFIRM_BOOKING']; ?> <i class="fas fa-fw fa-angle-right"></i></button>
             </form>
