@@ -1,6 +1,6 @@
 <?php
-require_once('../../common/lib.php');
-require_once('../../common/define.php');
+require_once(SYSBASE . 'common/lib.php');
+require_once(SYSBASE . 'common/define.php');
 require_once('Nmi.php');
 
 $gw = new Nmi();
@@ -22,9 +22,7 @@ $ccexp = $_POST['ccexpmm'] . $_POST['ccexpyy']; //"1010"  //999
 
 $r = $gw->doSale($_POST['price'], $_POST['ccnumber'], $ccexp, $_POST['cvv']);
 $response = $gw->responses;
-
 if ($response['response'] == 1) {
-
     $payment_amount = $_POST['price'];
     $id_booking = $_SESSION['tmp_book']['id']; // $response['orderid']
 
@@ -66,7 +64,7 @@ if ($response['response'] == 1) {
             if ($result_room !== false && $db->last_row_count() > 0) {
                 foreach ($result_room as $room) {
                     $room_content .= '<p><b>' . $room['title'] . '</b><br>
-                        ' . ($room['adults']) . ' ' . getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults'])) ;
+                        ' . ($room['adults']) . ' ' . getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']));
                     $room_content .= '<br>' . $texts['PRICE'] . ' : ' . formatPrice($room['amount'] * CURRENCY_RATE) . '</p>';
                 }
             }
@@ -120,12 +118,14 @@ if ($response['response'] == 1) {
                 sendMail(SENDER_EMAIL, OWNER, $mail['subject'], $mail['content'], $row['email'], $row['firstname'] . ' ' . $row['lastname']);
                 sendMail($row['email'], $row['firstname'] . ' ' . $row['lastname'], $mail['subject'], $mail['content']);
             }
-        }
 
+            echo str_replace('{amount}', '<b>' . formatPrice($_POST['price'], DEFAULT_CURRENCY_SIGN) . ' ' . $texts['INCL_VAT'] . '</b>', '<h4>'.$texts['PAYMENT_ARRIVAL_NOTICE'].'</h4>');
+
+//                        unset($_SESSION['book']);
+        }
     }
 } else {
 //    print_r($response);
-
-    Session::flash('error', $response['responsetext']);
-    return Redirect::back();
+    echo '<h4>'.$response['responsetext'].'</h4>';
 }
+?>

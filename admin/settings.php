@@ -80,7 +80,7 @@ if($action == 'edit_settings'){
         $config_tmp['captcha_skey'] = htmlspecialchars($_POST['captcha_skey'], ENT_QUOTES, 'UTF-8');
         $config_tmp['currency_converter_key'] = htmlspecialchars($_POST['currency_converter_key'], ENT_QUOTES, 'UTF-8');
         $config_tmp['autogeolocate'] = isset($_POST['autogeolocate']) ? htmlspecialchars($_POST['autogeolocate'], ENT_QUOTES, 'UTF-8') : '';
-        
+
         $config_tmp['payment_type'] = isset($_POST['payment_type']) ? implode(',', $_POST['payment_type']) : '';
         $config_tmp['paypal_email'] = htmlspecialchars($_POST['paypal_email'], ENT_QUOTES, 'UTF-8');
 
@@ -94,11 +94,7 @@ if($action == 'edit_settings'){
         $config_tmp['allow_ratings'] = isset($_POST['allow_ratings']) ? htmlspecialchars($_POST['allow_ratings'], ENT_QUOTES, 'UTF-8') : 0;
         $config_tmp['enable_booking_requests'] = isset($_POST['enable_booking_requests']) ? htmlspecialchars($_POST['enable_booking_requests'], ENT_QUOTES, 'UTF-8') : 0;
         //~ $config_tmp['enable_tourist_tax'] = isset($_POST['enable_tourist_tax']) ? htmlspecialchars($_POST['enable_tourist_tax'], ENT_QUOTES, 'UTF-8') : 0;
-        $config_tmp['braintree_merchant_id'] = htmlspecialchars($_POST['braintree_merchant_id'], ENT_QUOTES, 'UTF-8');
-        $config_tmp['braintree_public_key'] = htmlspecialchars($_POST['braintree_public_key'], ENT_QUOTES, 'UTF-8');
-        $config_tmp['braintree_private_key'] = htmlspecialchars($_POST['braintree_private_key'], ENT_QUOTES, 'UTF-8');
-        $config_tmp['razorpay_key_id'] = htmlspecialchars($_POST['razorpay_key_id'], ENT_QUOTES, 'UTF-8');
-        $config_tmp['razorpay_key_secret'] = htmlspecialchars($_POST['razorpay_key_secret'], ENT_QUOTES, 'UTF-8');
+
         $config_tmp['enable_ical'] = isset($_POST['enable_ical']) ? htmlspecialchars($_POST['enable_ical'], ENT_QUOTES, 'UTF-8') : 0;
         $config_tmp['enable_auto_ical_sync'] = isset($_POST['enable_auto_ical_sync']) ? htmlspecialchars($_POST['enable_auto_ical_sync'], ENT_QUOTES, 'UTF-8') : 0;
         $config_tmp['ical_sync_interval'] = htmlspecialchars($_POST['ical_sync_interval'], ENT_QUOTES, 'UTF-8');
@@ -144,17 +140,6 @@ if($action == 'edit_settings'){
             if(strpos($config_tmp['payment_type'], 'paypal') && ($config_tmp['paypal_email'] == '' || !preg_match('/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$/i', $config_tmp['paypal_email'])))
                 $field_notice['paypal_email'] = $texts['REQUIRED_FIELD'];
 
-            if(strpos($config_tmp['payment_type'], 'braintree')){
-                if($config_tmp['braintree_merchant_id'] == '') $field_notice['braintree_merchant_id'] = $texts['REQUIRED_FIELD'];
-                if($config_tmp['braintree_public_key'] == '') $field_notice['braintree_public_key'] = $texts['REQUIRED_FIELD'];
-                if($config_tmp['braintree_private_key'] == '') $field_notice['braintree_private_key'] = $texts['REQUIRED_FIELD'];
-            }
-            
-            if(strpos($config_tmp['payment_type'], 'razorpay')){
-                if($config_tmp['razorpay_key_id'] == '') $field_notice['razorpay_key_id'] = $texts['REQUIRED_FIELD'];
-                if($config_tmp['razorpay_key_secret'] == '') $field_notice['razorpay_key_secret'] = $texts['REQUIRED_FIELD'];
-            }
-            
             if(!is_numeric($config_tmp['enable_ical'])) $field_notice['enable_ical'] = $texts['REQUIRED_FIELD'];
             if(!is_numeric($config_tmp['enable_auto_ical_sync'])) $field_notice['enable_auto_ical_sync'] = $texts['REQUIRED_FIELD'];
             if($config_tmp['enable_ical'] == 1 && $config_tmp['enable_auto_ical_sync'] == 1){
@@ -301,7 +286,6 @@ $config_tmp['admin_folder'] = ADMIN_FOLDER;
 $config_tmp['captcha_pkey'] = CAPTCHA_PKEY;
 $config_tmp['captcha_skey'] = CAPTCHA_SKEY;
 $config_tmp['autogeolocate'] = AUTOGEOLOCATE;
-$config_tmp['payment_type'] = PAYMENT_TYPE;
 $config_tmp['paypal_email'] = PAYPAL_EMAIL;
 
 $config_tmp['payment_test_mode'] = PAYMENT_TEST_MODE;
@@ -313,13 +297,9 @@ $config_tmp['down_payment_amount'] = DOWN_PAYMENT_AMOUNT;
 $config_tmp['allow_comments'] = ALLOW_COMMENTS;
 $config_tmp['allow_ratings'] = ALLOW_RATINGS;
 $config_tmp['enable_booking_requests'] = ENABLE_BOOKING_REQUESTS;
-//~ $config_tmp['enable_tourist_tax'] = ENABLE_TOURIST_TAX;
-$config_tmp['braintree_merchant_id'] = BRAINTREE_MERCHANT_ID;
-$config_tmp['braintree_public_key'] = BRAINTREE_PUBLIC_KEY;
-$config_tmp['braintree_private_key'] = BRAINTREE_PRIVATE_KEY;
+
 $config_tmp['currency_converter_key'] = CURRENCY_CONVERTER_KEY;
-$config_tmp['razorpay_key_id'] = RAZORPAY_KEY_ID;
-$config_tmp['razorpay_key_secret'] = RAZORPAY_KEY_SECRET;
+
 $config_tmp['enable_ical'] = ENABLE_ICAL;
 $config_tmp['enable_auto_ical_sync'] = ENABLE_AUTO_ICAL_SYNC;
 $config_tmp['ical_sync_interval'] = ICAL_SYNC_INTERVAL;
@@ -1345,28 +1325,6 @@ $csrf_token = get_token('settings'); ?>
                                             </div>
                                         </div>
                                         <div class="row mb10">
-                                            <div class="col-md-8">
-                                                <div class="row">
-                                                    <label class="col-md-3 control-label">
-                                                        <?php echo $texts['PAYMENT_TYPE']; ?> <span class="red">*</span>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <div class="form-inline">
-                                                            <?php
-                                                            $payment_type = array_map("trim", explode(",", $config_tmp['payment_type'])); ?>
-                                                            <input type="checkbox" name="payment_type[]" value="2checkout"<?php if(in_array('2checkout', $payment_type)) echo ' checked="checked"'; ?>> Credit Card
-                                                            <input type="checkbox" name="payment_type[]" value="paypal"<?php if(in_array('paypal', $payment_type)) echo ' checked="checked"'; ?>> PayPal 
-                                                            <input type="checkbox" name="payment_type[]" value="check"<?php if(in_array('check', $payment_type)) echo ' checked="checked"'; ?>> Check 
-                                                            <input type="checkbox" name="payment_type[]" value="arrival"<?php if(in_array('arrival', $payment_type)) echo ' checked="checked"'; ?>> On arrival 
-                                                            <input type="checkbox" name="payment_type[]" value="braintree"<?php if(in_array('braintree', $payment_type)) echo ' checked="checked"'; ?>> Braintree
-                                                            <input type="checkbox" name="payment_type[]" value="razorpay"<?php if(in_array('razorpay', $payment_type)) echo ' checked="checked"'; ?>> Razorpay
-                                                            <div class="field-notice" rel="payment_type"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb10">
 											<div class="col-lg-12">
 												<p><big><b>PayPal</b></big></p>
 												<hr class="mt0 mb0">
@@ -1386,83 +1344,6 @@ $csrf_token = get_token('settings'); ?>
                                             </div>
                                         </div>
 
-                                        <div class="row mb10">
-											<div class="col-lg-12">
-												<p><big><b>Braintree</b></big></p>
-												<hr class="mt0 mb0">
-											</div>
-										</div>
-                                        <div class="row mb10">
-                                            <div class="col-md-8">
-                                                <div class="row">
-                                                    <label class="col-md-3 control-label">
-                                                        <?php echo $texts['MERCHANT_ID']; ?>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control" type="text" value="<?php echo $config_tmp['braintree_merchant_id']; ?>" name="braintree_merchant_id">
-                                                        <div class="field-notice" rel="braintree_merchant_id"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb10">
-                                            <div class="col-md-8">
-                                                <div class="row">
-                                                    <label class="col-md-3 control-label">
-                                                        <?php echo $texts['PUBLIC_KEY']; ?>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control" type="text" value="<?php echo $config_tmp['braintree_public_key']; ?>" name="braintree_public_key">
-                                                        <div class="field-notice" rel="braintree_public_key"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb10">
-                                            <div class="col-md-8">
-                                                <div class="row">
-                                                    <label class="col-md-3 control-label">
-                                                        <?php echo $texts['PRIVATE_KEY']; ?>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control" type="text" value="<?php echo $config_tmp['braintree_private_key']; ?>" name="braintree_private_key">
-                                                        <div class="field-notice" rel="braintree_private_key"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb10">
-											<div class="col-lg-12">
-												<p><big><b>Razorpay</b></big></p>
-												<hr class="mt0 mb0">
-											</div>
-										</div>
-                                        <div class="row mb10">
-                                            <div class="col-md-8">
-                                                <div class="row">
-                                                    <label class="col-md-3 control-label">
-                                                        <?php echo $texts['KEY_ID']; ?>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control" type="text" value="<?php echo $config_tmp['razorpay_key_id']; ?>" name="razorpay_key_id">
-                                                        <div class="field-notice" rel="razorpay_key_id"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb10">
-                                            <div class="col-md-8">
-                                                <div class="row">
-                                                    <label class="col-md-3 control-label">
-                                                        <?php echo $texts['KEY_SECRET']; ?>
-                                                    </label>
-                                                    <div class="col-md-8">
-                                                        <input class="form-control" type="text" value="<?php echo $config_tmp['razorpay_key_secret']; ?>" name="razorpay_key_secret">
-                                                        <div class="field-notice" rel="razorpay_key_secret"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                     <?php
                                 } ?>

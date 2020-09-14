@@ -257,6 +257,7 @@ if(ENABLE_COOKIES_NOTICE == 1 && !isset($_COOKIE['cookies_enabled'])){ ?>
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="login-form">
+                                    <img src="<?php echo getFromTemplate("images/logo.png"); ?>" alt="<?php echo SITE_TITLE; ?>">
                                     <form method="post" action="<?php echo DOCBASE.$page['alias']; ?>" class="ajax-form">
                                         <div class="alert alert-success" style="display:none;"></div>
                                         <div class="alert alert-danger" style="display:none;"></div>
@@ -286,6 +287,7 @@ if(ENABLE_COOKIES_NOTICE == 1 && !isset($_COOKIE['cookies_enabled'])){ ?>
                                     </form>
                                 </div>
                                 <div class="signup-form">
+                                    <img src="<?php echo getFromTemplate("images/logo.png"); ?>" alt="<?php echo SITE_TITLE; ?>">
                                     <form method="post" action="<?php echo DOCBASE.$page['alias']; ?>" class="ajax-form">
                                         <div class="alert alert-success" style="display:none;"></div>
                                         <div class="alert alert-danger" style="display:none;"></div>
@@ -330,6 +332,7 @@ if(ENABLE_COOKIES_NOTICE == 1 && !isset($_COOKIE['cookies_enabled'])){ ?>
                                     </form>
                                 </div>
                                 <div class="pass-form">
+                                    <img src="<?php echo getFromTemplate("images/logo.png"); ?>" alt="<?php echo SITE_TITLE; ?>">
                                     <form method="post" action="<?php echo DOCBASE.$page['alias']; ?>" class="ajax-form">
                                         <div class="alert alert-success" style="display:none;"></div>
                                         <div class="alert alert-danger" style="display:none;"></div>

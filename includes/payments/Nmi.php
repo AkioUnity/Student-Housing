@@ -316,7 +316,7 @@ class Nmi
         }
         curl_close($ch);
         unset($ch);
-        print "\n$data\n";
+//        print "\n$data\n";
         $data = explode("&", $data);
         for ($i = 0; $i < count($data); $i++) {
             $rdata = explode("=", $data[$i]);

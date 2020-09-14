@@ -40,9 +40,7 @@ if(isset($_POST['id']) && isset($_SESSION['user']['id'])){
 								echo $texts['CHECK_IN'].' <strong>'.gmstrftime(DATE_FORMAT, $row['from_date']).'</strong><br>
 								'.$texts['CHECK_OUT'].' <strong>'.gmstrftime(DATE_FORMAT, $row['to_date']).'</strong><br>
 								<strong>'.$row['nights'].'</strong> '.$texts['NIGHTS'].'<br>
-								<strong>'.($row['adults']+$row['children']).'</strong> '.$texts['PERSONS'].' - 
-								'.$texts['ADULTS'].': <strong>'.$row['adults'].'</strong> / 
-								'.$texts['CHILDREN'].': <strong>'.$row['children'].'</strong>';
+								<strong>'.($row['adults']).'</strong> '.$texts['PERSONS'];
 								if($row['comments'] != '') echo '<p><b>'.$texts['COMMENTS'].'</b><br>'.nl2br($row['comments']).'</p>';
 							}
                             echo '
@@ -73,9 +71,7 @@ if(isset($_POST['id']) && isset($_SESSION['user']['id'])){
                             '<tr>
                                 <td>'.$room['title'].'</td>
                                 <td>
-                                    '.($room['adults']+$room['children']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']+$room['children'])).': ';
-                                    if($room['adults'] > 0) echo $room['adults'].' '.getAltText($texts['ADULT'], $texts['ADULTS'], $room['adults']).' ';
-                                    if($room['children'] > 0) echo $room['children'].' '.getAltText($texts['CHILD'], $texts['CHILDREN'], $room['children']).' ';
+                                    '.($room['adults']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']));
                                     echo '
                                 </td>
                                 <td class="text-right" width="15%">'.formatPrice($room['amount']*CURRENCY_RATE).'</td>

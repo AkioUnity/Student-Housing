@@ -916,6 +916,8 @@ ul.nostyle {
     padding: 20px 30px;
     position: relative;
     text-align: left;
+    box-shadow: 0px 1px 10px 4px #032c49e0;
+    border-radius: 6px;
 }
 .text-center h1::after, h1.text-center::after, [style*="text-align: center"] h1::after, h1[style*="text-align: center"]::after,
 .text-center h2::after, h2.text-center::after, [style*="text-align: center"] h2::after, h2[style*="text-align: center"]::after,

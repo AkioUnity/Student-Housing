@@ -11,7 +11,7 @@ $user_id = isset($_SESSION['user']['id']) ? $_SESSION['user']['id'] : 0;
 $result_user = $db->query("SELECT * FROM pm_user WHERE id = ".$db->quote($user_id)." AND checked = 1");
 if($result_user !== false && $db->last_row_count() > 0){
     $row = $result_user->fetch();
-    
+
     $firstname = $row['firstname'];
     $lastname = $row['lastname'];
     $login = $row['login'];
@@ -34,32 +34,34 @@ if($result_user !== false && $db->last_row_count() > 0){
     $company = "";
     $country = "";
     $mobile = "";
-    $phone = ""; 
+    $phone = "";
 }
 
 require(getFromTemplate("common/header.php", false)); ?>
 
 <section id="page">
-    
+
     <?php include(getFromTemplate("common/page_header.php", false)); ?>
-    
+
     <div id="content" class="pt30 pb30">
         <div class="container">
-            
+
             <?php
             if($user_id > 0){ ?>
                 <div class="row">
                     <div class="col-sm-12">
                         <ul class="pagination pull-right">
-                            <li<?php if($view == "account") echo " class=\"active\""; ?>><a href="?view=account"><?php echo $texts['MY_ACCOUNT']; ?></a></li>
-                            <li<?php if($view == "booking-history") echo " class=\"active\""; ?>><a href="?view=booking-history"><?php echo $texts['BOOKING_HISTORY']; ?></a></li>
+                            <li <?php if($view == "account") echo " class=\"active\""; ?>>
+                                <a href="?view=account"><?php echo $texts['MY_ACCOUNT']; ?></a></li>
+<!--                            <li--><?php //if($view == "lease-history") echo " class=\"active\""; ?><!--
+                                <a href="?view=lease-history">--><?php //echo $texts['BOOKING_HISTORY']; ?><!--</a></li>-->
                         </ul>
                     </div>
                 </div>
                 <?php
             }
-            
-            if($view == "booking-history" && $user_id > 0){ ?>
+
+            if($view == "lease-history" && $user_id > 0){ ?>
                 <fieldset>
                     <legend><?php echo $texts['BOOKING_HISTORY']; ?></legend>
                     <?php
@@ -74,7 +76,6 @@ require(getFromTemplate("common/header.php", false)); ?>
                                         <th class="text-center"><?php echo $texts['TO_DATE']; ?></th>
                                         <th class="text-center"><?php echo $texts['NIGHTS']; ?></th>
                                         <th class="text-center"><?php echo $texts['ADULTS']; ?></th>
-                                        <th class="text-center"><?php echo $texts['CHILDREN']; ?></th>
                                         <th class="text-center"><?php echo $texts['TOTAL']; ?></th>
                                         <th class="text-center"><?php echo $texts['PAYMENT']; ?></th>
                                         <th></th>
@@ -89,7 +90,6 @@ require(getFromTemplate("common/header.php", false)); ?>
                                             <td><?php if(!is_null($row['to_date'])) echo gmstrftime(DATE_FORMAT, $row['to_date']); ?></td>
                                             <td class="text-center"><?php echo $row['nights']; ?></td>
                                             <td class="text-center"><?php echo $row['adults']; ?></td>
-                                            <td class="text-center"><?php echo $row['children']; ?></td>
                                             <td class="text-right"><?php echo formatPrice($row['total']*CURRENCY_RATE); ?></td>
                                             <td class="text-left">
                                                 <?php
@@ -240,7 +240,7 @@ require(getFromTemplate("common/header.php", false)); ?>
                                                     $id_country = $row['id'];
                                                     $country_name = $row['name'];
                                                     $selected = ($country == $country_name) ? " selected=\"selected\"" : "";
-                                                    
+
                                                     echo "<option value=\"".$country_name."\"".$selected.">".$country_name."</option>";
                                                 }
                                             } ?>

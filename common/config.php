@@ -37,7 +37,7 @@ define('ADMIN_FOLDER', 'admin');
 define('CAPTCHA_PKEY', ''); // ReCAPTCHA public key
 define('CAPTCHA_SKEY', ''); // ReCAPTCHA secret key
 define('AUTOGEOLOCATE', '0'); // Change the currency according to the country (https required)
-define('PAYMENT_TYPE', '2checkout,paypal'); // 2checkout,paypal,check,arrival
+define('PAYMENT_TYPE', 'Credit Card,paypal'); // 2checkout,paypal,check,arrival
 define('PAYPAL_EMAIL', 'bill@hiawatha.com');
 
 define('PAYMENT_TEST_MODE', '1');
@@ -50,12 +50,7 @@ define('TOURIST_TAX_TYPE', 'fixed');
 define('ALLOW_COMMENTS', '1');
 define('ALLOW_RATINGS', '1'); // If comments enabled
 define('ENABLE_BOOKING_REQUESTS', '0'); // Possibility to make a reservation request if no availability
-define('BRAINTREE_MERCHANT_ID', '');
-define('BRAINTREE_PUBLIC_KEY', '');
-define('BRAINTREE_PRIVATE_KEY', '');
 define('CURRENCY_CONVERTER_KEY', ''); // currencyconverterapi.com API key
-define('RAZORPAY_KEY_ID', '');
-define('RAZORPAY_KEY_SECRET', '');
 define('ENABLE_ICAL', '1');
 define('ENABLE_AUTO_ICAL_SYNC', '1');
 define('ICAL_SYNC_INTERVAL', 'daily'); // daily | hourly

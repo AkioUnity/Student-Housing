@@ -76,7 +76,7 @@ require(getFromTemplate('common/header.php', false)); ?>
 								echo $texts['CHECK_IN'].' <strong>'.gmstrftime(DATE_FORMAT, $_SESSION['book']['from_date']).'</strong><br>
 								'.$texts['CHECK_OUT'].' <strong>'.gmstrftime(DATE_FORMAT, $_SESSION['book']['to_date']).'</strong><br>
 								<strong>'.$_SESSION['book']['nights'].'</strong> '.getAltText($texts['NIGHT'], $texts['NIGHTS'], $_SESSION['book']['nights']).'<br>
-								<strong>'.($_SESSION['book']['adults']+$_SESSION['book']['children']).'</strong> '.getAltText($texts['PERSON'], $texts['PERSONS'], ($_SESSION['book']['adults']+$_SESSION['book']['children']));
+								<strong>'.($_SESSION['book']['adults']).'</strong> '.getAltText($texts['PERSON'], $texts['PERSONS'], ($_SESSION['book']['adults']));
 								if($_SESSION['book']['comments'] != '') echo '<p><b>'.$texts['COMMENTS'].'</b><br>'.nl2br($_SESSION['book']['comments']).'</p>';
 							}
                             echo '
@@ -107,7 +107,7 @@ require(getFromTemplate('common/header.php', false)); ?>
                                 '<tr>
                                     <td>'.$room['title'].'</td>
                                     <td>
-                                        '.($room['adults']+$room['children']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']+$room['children']));
+                                        '.($room['adults']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($room['adults']));
                                         echo '
                                     </td>
                                     <td class="text-right" width="15%">'.formatPrice($room['amount']*CURRENCY_RATE).'</td>
@@ -155,9 +155,7 @@ require(getFromTemplate('common/header.php', false)); ?>
                                 <td>'.$activity['duration'].'</td>
                                 <td>'.gmstrftime(DATE_FORMAT.' '.TIME_FORMAT, $activity['session_date']).'</td>
                                 <td>
-                                    '.($activity['adults']+$activity['children']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($activity['adults']+$activity['children'])).': ';
-                                    if($activity['adults'] > 0) echo $activity['adults'].' '.getAltText($texts['ADULT'], $texts['ADULTS'], $activity['adults']).' ';
-                                    if($activity['children'] > 0) echo $activity['children'].' '.getAltText($texts['CHILD'], $texts['CHILDREN'], $activity['children']).' ';
+                                    '.($activity['adults']).' '.getAltText($texts['PERSON'], $texts['PERSONS'], ($activity['adults'])).': ';
                                     echo '
                                 </td>
                                 <td class="text-right" width="15%">'.formatPrice($activity['amount']*CURRENCY_RATE).'</td>

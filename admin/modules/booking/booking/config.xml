@@ -76,9 +76,8 @@
 				<option value="check">[BY_CHECK]</option>
 				<option value="transfer">[BANK_TRANSFER]</option>
 				<option value="paypal">PayPal</option>
-                <option value="2checkout">CreditCard</option>
+                <option value="Credit Card">CreditCard</option>
                 <option value="braintree">Braintree</option>
-                <option value="razorpay">Razorpay</option>
 			</options>
 		</field>
         <table label="[ROOMS]" name="booking_room" fieldref="id_booking">
@@ -132,9 +131,7 @@
                     <option value="check">[BY_CHECK]</option>
                     <option value="transfer">[BANK_TRANSFER]</option>
                     <option value="paypal">PayPal</option>
-                    <option value="2checkout">CreditCard</option>
-                    <option value="braintree">Braintree</option>
-					<option value="razorpay">Razorpay</option>
+                    <option value="Credit Card">CreditCard</option>
                 </options>
             </field>
 			<field multi="0" label="[TRANSACTION_ID]" name="trans" type="text" required="0" unique="0" validation="none"/>

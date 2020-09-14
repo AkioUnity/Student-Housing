@@ -135,6 +135,8 @@ if(isset($_POST['mc_gross'])){
                                     sendMail(SENDER_EMAIL, OWNER, $mail['subject'], $mail['content'], $row['email'], $row['firstname'].' '.$row['lastname']);
                                     sendMail($row['email'], $row['firstname'].' '.$row['lastname'], $mail['subject'], $mail['content']);
                                 }
+
+                                echo str_replace('{amount}', '<b>' . formatPrice($_POST['price'], DEFAULT_CURRENCY_SIGN) . ' ' . $texts['INCL_VAT'] . '</b>', $texts['PAYMENT_ARRIVAL_NOTICE']);
                             }
                         }
                     }
