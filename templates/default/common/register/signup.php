@@ -13,33 +13,56 @@ if(isset($_GET['token']) && isset($_GET['id']) && is_numeric($_GET['id'])){
     $result_token = $db->query('SELECT * FROM pm_user WHERE token = '.$db->quote(htmlentities($_GET['token'], ENT_COMPAT, 'UTF-8')).' AND id = '.$id.' AND (checked = 0 OR checked IS NULL)');
     if($result_token !== false && $db->last_row_count() > 0){
         if($db->query('UPDATE pm_user SET checked = 1, token = \'\' WHERE id = '.$id) !== false){
-            
+
             $row = $result_token->fetch();
-            
+
             $_SESSION['user']['id'] = $id;
             $_SESSION['user']['login'] = $row['login'];
             $_SESSION['user']['email'] = $row['email'];
             $_SESSION['user']['type'] = $row['type'];
+
+            $post_data=array(
+                "chain"=> "No",
+                "emails"=> [$row['email']],
+                "message"=> "Hiawatha Student Housing Lease Agreement",
+                "positions"=> ["[]"],
+                "duplicate"=> "No",
+                "docWidth"=> 867,
+                "document_key"=> Document_Key);
+//  "csrf-token": "678f229addd751aed147bf0f0d92336bf2c27b455186d2ae6fdc3535b4d329ba"
+
+            $ch = curl_init();
+
+            curl_setopt($ch, CURLOPT_URL,Sign_Url);
+            curl_setopt($ch, CURLOPT_POST, 1);
+
+            curl_setopt($ch, CURLOPT_POSTFIELDS, "chain=No&emails=[\"".$row['email']."\"]&message=Hiawatha Student Housing Lease Agreement&positions=[\"[]\"]&duplicate=No&docWidth=867&document_key=hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx");
+            curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+            $server_output = curl_exec($ch);
+            curl_close ($ch);
+//            die($server_output);
         }
     }
     if(isset($_GET['redirect']) && $_GET['redirect'] != '')
         header('Location: '.$_GET['redirect']);
     else
         header('Location: '.DOCBASE.LANG_ALIAS);
-        
+
     exit();
 }else{
     $response = array('html' => '', 'notices' => array(), 'error' => '', 'success' => '', 'redirect' => '');
 
     if($user_id > 0) $action = 'edit';
     else $action = 'add';
-    
+
     if(isset($_POST['signup_type'])) $signup_type = $_POST['signup_type'];
     else $signup_type = 'complete';
-    
+
     if(isset($_POST['signup_redirect'])) $signup_redirect = $_POST['signup_redirect'];
     else $signup_redirect = '';
-    
+
     $login = htmlentities($_POST['username'], ENT_COMPAT, 'UTF-8');
     $email = htmlentities($_POST['email'], ENT_COMPAT, 'UTF-8');
     $password = $_POST['password'];
@@ -58,7 +81,7 @@ if(isset($_GET['token']) && isset($_GET['id']) && is_numeric($_GET['id'])){
         if($email == $row['email']) $response['notices']['email'] = $texts['ACCOUNT_EXISTS'];
         if($login == $row['login']) $response['notices']['username'] = $texts['USERNAME_EXISTS'];
     }
-    
+
     if($signup_type != 'quick'){
         $firstname = htmlentities($_POST['firstname'], ENT_COMPAT, 'UTF-8');
         $lastname = htmlentities($_POST['lastname'], ENT_COMPAT, 'UTF-8');
@@ -79,7 +102,7 @@ if(isset($_GET['token']) && isset($_GET['id']) && is_numeric($_GET['id'])){
         if($city == '') $response['notices']['city'] = $texts['REQUIRED_FIELD'];
         if($country == '' || $country == '0') $response['notices']['country'] = $texts['REQUIRED_FIELD'];
         if($phone == '' || preg_match('/([0-9\-\s\+\(\)\.]+)/i', $phone) !== 1) $response['notices']['phone'] = $texts['REQUIRED_FIELD'];
-        
+
         $name = $firstname.' '.$lastname;
     }else{
         $firstname = '';
@@ -91,14 +114,14 @@ if(isset($_GET['token']) && isset($_GET['id']) && is_numeric($_GET['id'])){
         $country = '';
         $mobile = '';
         $phone = '';
-        
+
         $name = $login;
     }
-            
+
     if(count($response['notices']) == 0){
 
         $token = md5(uniqid($email, true));
-    
+
         $data = array();
         $data['id'] = ($user_id > 0) ? $user_id : null;
         $data['firstname'] = $firstname;
@@ -125,19 +148,19 @@ if(isset($_GET['token']) && isset($_GET['id']) && is_numeric($_GET['id'])){
             $result_user = db_prepareUpdate($db, 'pm_user', $data);
         else
             $result_user = db_prepareInsert($db, 'pm_user', $data);
-            
+
         if($result_user->execute() !== false){
-            
+
             if($action == 'edit'){
                 $_SESSION['user']['login'] = $login;
                 $_SESSION['user']['email'] = $email;
                 $response['success'] = $texts['ACCOUNT_EDIT_SUCCESS'];
             }else{
-				
+
 				$mail = getMail($db, 'ACCOUNT_CONFIRMATION', array(
 					'{link}' => getUrl().'?token='.$token.'&id='.$db->lastInsertId().'&redirect='.urlencode($signup_redirect)
 				));
-				
+
                 if($mail !== false && sendMail($email, $name, $mail['subject'], $mail['content']) !== false)
                     $response['success'] = $texts['ACCOUNT_CREATED'];
                 else

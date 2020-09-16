@@ -2,6 +2,8 @@
 require_once('../../common/lib.php');
 require_once('../../common/define.php');
 
+print_r($_POST);
+
 if(isset($_POST['mc_gross'])){
     
     $req = 'cmd=_notify-validate';

@@ -21,7 +21,11 @@ define('DB_NAME', 'hrh_student');
 define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
 define('DB_USER', 'root');
-define('DB_PASS', 'djwth10');
+define('DB_PASS', 'djwth10');  //diff
+
+define('Document_Key', 'hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx');
+define('Sign_Url', 'http://192.168.0.53/signer/requests/sendAgreement');   //diff
+
 define('SENDER_EMAIL', 'muellerUnity@gmail.com');
 define('SENDER_NAME', 'Holtz Builders &lt;support@hiawatha.com&gt;');
 define('USE_SMTP', '1');
@@ -38,7 +42,7 @@ define('CAPTCHA_PKEY', ''); // ReCAPTCHA public key
 define('CAPTCHA_SKEY', ''); // ReCAPTCHA secret key
 define('AUTOGEOLOCATE', '0'); // Change the currency according to the country (https required)
 define('PAYMENT_TYPE', 'Credit Card,paypal'); // 2checkout,paypal,check,arrival
-define('PAYPAL_EMAIL', 'bill@hiawatha.com');
+define('PAYPAL_EMAIL', 'sb-jzu1x3230523@business.example.com');
 
 define('PAYMENT_TEST_MODE', '1');
 define('ENABLE_DOWN_PAYMENT', '1');

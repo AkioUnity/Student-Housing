@@ -53,8 +53,8 @@ require(getFromTemplate("common/header.php", false)); ?>
                         <ul class="pagination pull-right">
                             <li <?php if($view == "account") echo " class=\"active\""; ?>>
                                 <a href="?view=account"><?php echo $texts['MY_ACCOUNT']; ?></a></li>
-<!--                            <li--><?php //if($view == "lease-history") echo " class=\"active\""; ?><!--
-                                <a href="?view=lease-history">--><?php //echo $texts['BOOKING_HISTORY']; ?><!--</a></li>-->
+                            <li<?php if($view == "lease-history") echo " class=\"active\""; ?>>
+                                <a href="?view=lease-history"><?php echo $texts['BOOKING_HISTORY']; ?></a></li>
                         </ul>
                     </div>
                 </div>
