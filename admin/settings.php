@@ -135,7 +135,7 @@ if($action == 'edit_settings'){
             }
             closedir($rep);
             
-            if($config_tmp['payment_type'] == '') $field_notice['payment_type'] = $texts['REQUIRED_FIELD'];
+//            if($config_tmp['payment_type'] == '') $field_notice['payment_type'] = $texts['REQUIRED_FIELD'];
             
             if(strpos($config_tmp['payment_type'], 'paypal') && ($config_tmp['paypal_email'] == '' || !preg_match('/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$/i', $config_tmp['paypal_email'])))
                 $field_notice['paypal_email'] = $texts['REQUIRED_FIELD'];
@@ -242,7 +242,12 @@ if($action == 'edit_settings'){
                 exit();
             }
         }else
+        {
+            $_SESSION['msg_error']=$field_notice;
             $_SESSION['msg_error'][] = $texts['FORM_ERRORS'];
+            print_r($field_notice);
+        }
+
     }else
         $_SESSION['msg_error'][] = $texts['BAD_TOKEN1'];
 }

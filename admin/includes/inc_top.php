@@ -1,5 +1,5 @@
 <?php debug_backtrace() || die ("Direct access not permitted"); ?>
-<!-- Navigation -->
+<!-- Navigation inc_top.php -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
