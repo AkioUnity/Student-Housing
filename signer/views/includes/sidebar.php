@@ -1,6 +1,10 @@
 
     <div class="left-bar">
         <div class="slimscroll-menu">
+            <li><a href="<?=url("../admin");?>">
+                    <label class="menu-icon"><i class="ion-android-apps"></i> </label><span class="text">Admin</span>
+                </a>
+            </li>
         <li><a href="<?=url("");?>">
                 <label class="menu-icon"><i class="ion-ios-speedometer"></i> </label><span class="text">Dashboard</span>
             </a></li>

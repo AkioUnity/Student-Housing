@@ -71,9 +71,9 @@ a:focus {
 /*header*/
 
 header {
-    background: #fff;
-    height: 70px;
-    padding: 15px;
+    background: #5381ba;
+    height: 60px;
+    padding: 10px;
     position: fixed;
     width: 100%;
     z-index: 99;
@@ -81,7 +81,7 @@ header {
 }
 
 .logo {
-    width: 160px;
+    width: 125px;
     float: left;
 }
 
@@ -94,12 +94,15 @@ header {
 .header-search input {
     height: 35px;
     width: 250px;
-    font-size: 16px;
-    margin-top: 3px;
+    font-size: 15px;
+    margin-top: 0px;
     color: #555;
     position: unset;
     border: none;
-    margin-left: 13px;
+    margin-left: 12px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 10px 3px #2f5c94;
+    padding: 10px;
 }
 
 .header-search input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -123,8 +126,8 @@ header {
 }
 
 .search-icon {
-    font-size: 30px;
-    color: #d4d4d4;
+    font-size: 25px;
+    color: #fff;
     margin-left: 20px;
 }
 
@@ -140,7 +143,7 @@ header {
 
 header .notifications {
     font-size: 25px;
-    color: #818181
+    color: #c6e0ff
 }
 
 header .bubble {
@@ -196,11 +199,12 @@ header .profile {
 }
 
 .left-bar {
-    width: 250px;
+    width: 230px;
     height: 100%;
     position: fixed;
     float: left;
-    padding-top: 90px;
+    background: #3d3d3d;
+    padding-top: 60px;
     z-index: 98;
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
@@ -244,7 +248,7 @@ header .profile {
     display: block;
     margin: 15px;
     font-size: 14px;
-    color: #777;
+    color: #ccc;
     margin-left: 3em;
 }
 
@@ -252,7 +256,7 @@ header .profile {
 .content {
     margin: 0 0 0 250px;
     padding: 15px;
-    padding-top: 90px;
+    padding-top: 60px;
     -webkit-transition: all 0.9s ease;
     -moz-transition: all 0.9s ease;
     -o-transition: all 0.9s ease;
@@ -340,7 +344,7 @@ ul.dropdown-menu.public-actions {
 }
 
 .page-title {
-    margin-bottom: 25px;
+    margin-bottom: 5px;
     overflow: hidden;
 }
 

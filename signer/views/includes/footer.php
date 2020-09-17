@@ -1,6 +1,6 @@
 
     <footer>
-        <p class="text-right">&copy; <?=date("Y")?> <?=env("APP_NAME")?> | All Rights Reserved. Ver {{ env("APP_VERSION") }}</p>
+        <p class="text-right">&copy; <?=date("Y")?> <?=env("APP_NAME")?> | Holtz Builders inc </p>
     </footer>
 
     <script type="text/javascript">

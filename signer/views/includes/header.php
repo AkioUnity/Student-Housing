@@ -6,6 +6,7 @@
         <!-- logo -->
         <div class="logo">
             <a href="<?=url("");?>">
+<!--                --><?php //echo SITE_TITLE; ?><!--<span class="hidden-xs"> | HIAWATHA Admin</span>-->
                 <img src="<?=url("");?>uploads/app/{{ env('APP_LOGO'); }}" class="img-responsive">
             </a>
         </div>
