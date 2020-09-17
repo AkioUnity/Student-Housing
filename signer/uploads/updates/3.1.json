@@ -1,0 +1,2 @@
+  ALTER TABLE `fields` CHANGE `type` `type` ENUM('custom','input','stamp') CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT 'custom'@signer
+  ALTER TABLE `users` ADD `timezone` VARCHAR(256) NOT NULL DEFAULT 'Africa/Nairobi' AFTER `hiddenfiles`

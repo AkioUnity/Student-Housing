@@ -1,0 +1,31 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+### Send POST request with json body
+POST http://192.168.0.53/signer/requests/sendAgreement/
+Content-Type: application/json
+
+{
+  "chain": "No",
+  "emails": ["worklceo@gmail.com"],
+  "message": "Hiawatha Student Housing Lease Agreement",
+  "positions": ["[]"],
+  "duplicate": "No",
+  "docWidth": 867,
+  "document_key": "hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx"
+//  "csrf-token": "678f229addd751aed147bf0f0d92336bf2c27b455186d2ae6fdc3535b4d329ba"
+}
+
+###
+
+POST http://192.168.0.53/signer/requests/sendAgreement/
+Content-Type: application/x-www-form-urlencoded
+
+chain=No&emails=["worklceo@gmail.com"]&message=Hiawatha Student Housing Lease Agreement&positions=["[]"]&duplicate=No&docWidth=867&document_key=hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx
+
+
+###

@@ -1,0 +1,4 @@
+ALTER TABLE `files` ADD `public_permissions` enum('read_only','sign_edit','disabled') NOT NULL DEFAULT 'sign_edit'@signer
+ALTER TABLE `requests` ADD `chain_emails` text@signer
+ALTER TABLE `requests` ADD `chain_positions` text@signer
+ALTER TABLE `requests` ADD `sender_note` text
