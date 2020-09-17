@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/signer/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/signer/vendor/suin/php-image-resizer" />
+      <path value="$PROJECT_DIR$/signer/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/signer/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/signer/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/signer/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/signer/vendor/africastalking/africastalking" />
+      <path value="$PROJECT_DIR$/signer/vendor/composer" />
+      <path value="$PROJECT_DIR$/signer/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/signer/vendor/google/apiclient" />
+      <path value="$PROJECT_DIR$/signer/vendor/twilio/sdk" />
+      <path value="$PROJECT_DIR$/signer/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/signer/vendor/php-di/php-di" />
+      <path value="$PROJECT_DIR$/signer/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/signer/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/signer/vendor/google/apiclient-services" />
+      <path value="$PROJECT_DIR$/signer/vendor/php-di/phpdoc-reader" />
+      <path value="$PROJECT_DIR$/signer/vendor/gilbitron/easycsrf" />
+      <path value="$PROJECT_DIR$/signer/vendor/cloudconvert/cloudconvert-php" />
+      <path value="$PROJECT_DIR$/signer/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/signer/vendor/pecee/simple-router" />
+      <path value="$PROJECT_DIR$/signer/vendor/oohology/dotenvwriter" />
+      <path value="$PROJECT_DIR$/signer/vendor/gumlet/php-image-resize" />
+      <path value="$PROJECT_DIR$/signer/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/signer/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/signer/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/signer/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/signer/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/signer/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/signer/vendor/phpseclib/phpseclib" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="5.5.0" />
+</project>

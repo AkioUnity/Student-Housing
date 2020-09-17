@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eb89b0d2-7c19-408e-a595-1e45a470b0a9" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>RAZORPAY</find>
+      <find>braintree</find>
+      <find>check</find>
+      <find>2checkout</find>
+      <find>braintree_merchant_id</find>
+      <find>include</find>
+      <find>Username</find>
+      <find>logo.png</find>
+      <find>.white-popup-block</find>
+      <find>payment_option</find>
+      <find>.btn</find>
+      <find>.btn-de</find>
+      <find>footer.jpg</find>
+      <find>_vat</find>
+      <find>INCL. TAX</find>
+      <find>total_booking&quot;</find>
+      <find>signup.php</find>
+      <find>curl_init</find>
+      <find>ENABLE_COOKIES_NOTICE</find>
+      <find>TIME_FORMAT</find>
+      <find>PAYPAL_EMAIL</find>
+      <find>The following form contains some errors</find>
+      <find>RAZORPAY_KEY_ID</find>
+      <find>FORM_ERRORS</find>
+      <find>$field_notice</find>
+      <find>msg_error</find>
+      <find>csrf_token</find>
+      <find>REQUIRED_FIELD</find>
+      <find>payment_type</find>
+      <find>#module-menu</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="&lt;b188f7ae-a0ac-49d0-9b21-6cdf92c7c353&gt;/sign/.env" />
+        <option value="$PROJECT_DIR$/admin/index.php" />
+        <option value="$PROJECT_DIR$/admin/login.php" />
+        <option value="$PROJECT_DIR$/templates/default/common/register/login.php" />
+        <option value="$PROJECT_DIR$/common/define.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/rooms.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/room.php" />
+        <option value="$PROJECT_DIR$/templates/default/common/get_articles_popup.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/article.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/contact.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/page.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/sitemap.php" />
+        <option value="$PROJECT_DIR$/templates/default/common/get_days.php" />
+        <option value="$PROJECT_DIR$/common/lib.php" />
+        <option value="&lt;b188f7ae-a0ac-49d0-9b21-6cdf92c7c353&gt;/.htaccess" />
+        <option value="$PROJECT_DIR$/common/setenv.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/booking.php" />
+        <option value="$PROJECT_DIR$/templates/default/common/change_num_rooms.php" />
+        <option value="$PROJECT_DIR$/templates/default/common/functions.php" />
+        <option value="E:/Download/chrome/simple-credit-card-validation-form/index.html" />
+        <option value="$PROJECT_DIR$/admin/includes/langs/es.ini" />
+        <option value="$PROJECT_DIR$/admin/includes/langs/en.ini" />
+        <option value="$PROJECT_DIR$/admin/includes/langs/pt.ini" />
+        <option value="$PROJECT_DIR$/admin/includes/langs/tr.ini" />
+        <option value="$PROJECT_DIR$/admin/includes/langs/nl.ini" />
+        <option value="$PROJECT_DIR$/admin/includes/langs/fr.ini" />
+        <option value="$PROJECT_DIR$/templates/default/models/details.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/summary.php" />
+        <option value="$PROJECT_DIR$/includes/payments/credit_card_form.php" />
+        <option value="$PROJECT_DIR$/includes/payments/Nmi.php" />
+        <option value="$PROJECT_DIR$/includes/payments/credit_card_notify.php" />
+        <option value="$PROJECT_DIR$/templates/default/common/booking-popup.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/payment.php" />
+        <option value="$PROJECT_DIR$/admin/modules/booking/booking/config.xml" />
+        <option value="$PROJECT_DIR$/templates/default/common/register/reset.php" />
+        <option value="$PROJECT_DIR$/templates/default/css/layout.css" />
+        <option value="$PROJECT_DIR$/templates/default/common/header.php" />
+        <option value="$PROJECT_DIR$/templates/default/css/custom.css" />
+        <option value="$PROJECT_DIR$/templates/default/css/main.css" />
+        <option value="$PROJECT_DIR$/templates/default/css/colors.css" />
+        <option value="$PROJECT_DIR$/templates/default/common/register/signup.php" />
+        <option value="$PROJECT_DIR$/includes/payments/_paypal.php" />
+        <option value="$PROJECT_DIR$/includes/payments/paypal_notify.php" />
+        <option value="$PROJECT_DIR$/templates/default/models/account.php" />
+        <option value="&lt;b188f7ae-a0ac-49d0-9b21-6cdf92c7c353&gt;/common/config.php" />
+        <option value="$PROJECT_DIR$/admin/settings.php" />
+        <option value="$PROJECT_DIR$/admin/includes/inc_top.php" />
+        <option value="$PROJECT_DIR$/common/config.php" />
+        <option value="$PROJECT_DIR$/signer/.env" />
+        <option value="$PROJECT_DIR$/signer/src/routes.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="656" />
+    <option name="height" value="456" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Bitnami\apache2\htdocs\hotel\includes\payments" />
+      <recent name="D:\Bitnami\apache2\htdocs\hotel\templates\default\images" />
+      <recent name="D:\Bitnami\apache2\htdocs\hotel\admin\images" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eb89b0d2-7c19-408e-a595-1e45a470b0a9" name="Default Changelist" comment="" />
+      <created>1596740364432</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596740364432</updated>
+      <workItem from="1596740366015" duration="8558000" />
+      <workItem from="1596819898226" duration="8935000" />
+      <workItem from="1597061748371" duration="1821000" />
+      <workItem from="1597164367678" duration="397000" />
+      <workItem from="1597186259848" duration="699000" />
+      <workItem from="1597448787999" duration="2160000" />
+      <workItem from="1597507418200" duration="594000" />
+      <workItem from="1597541627136" duration="7294000" />
+      <workItem from="1598033698337" duration="5511000" />
+      <workItem from="1598104396699" duration="2711000" />
+      <workItem from="1598279545439" duration="3553000" />
+      <workItem from="1598345516419" duration="2267000" />
+      <workItem from="1598468314083" duration="9670000" />
+      <workItem from="1598598839500" duration="10196000" />
+      <workItem from="1598947807904" duration="609000" />
+      <workItem from="1598953956224" duration="599000" />
+      <workItem from="1599032004144" duration="781000" />
+      <workItem from="1599039008026" duration="4214000" />
+      <workItem from="1599109708097" duration="17063000" />
+      <workItem from="1599246251265" duration="1908000" />
+      <workItem from="1599440844365" duration="4608000" />
+      <workItem from="1599461351471" duration="188000" />
+      <workItem from="1599469322089" duration="6262000" />
+      <workItem from="1599558083576" duration="8425000" />
+      <workItem from="1599637482780" duration="2355000" />
+      <workItem from="1599710888174" duration="9157000" />
+      <workItem from="1599758462381" duration="70991000" />
+    </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1596740672489</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596740672490</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init">
+      <created>1596740831668</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596740831668</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init">
+      <created>1596740947555</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596740947555</updated>
+    </task>
+    <task id="LOCAL-00004" summary="change hotels">
+      <created>1596819922410</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596819922410</updated>
+    </task>
+    <task id="LOCAL-00005" summary="comment return;">
+      <created>1596824995746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1596824995746</updated>
+    </task>
+    <task id="LOCAL-00006" summary="updated hotel">
+      <created>1598854732320</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598854732320</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated hotel 9-2 to show to client.">
+      <created>1599059266366</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1599059266366</updated>
+    </task>
+    <task id="LOCAL-00008" summary="check setting issue">
+      <created>1600330277180</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1600330277180</updated>
+    </task>
+    <task id="LOCAL-00009" summary="singer init">
+      <created>1600331011157</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1600331011157</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="191526000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1396348" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.4217002" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.16331096" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.102908276" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" show_stripe_button="false" weight="0.32975295" />
+      <window_info anchor="right" id="Remote Host" order="4" weight="0.1047261" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <MESSAGE value="change hotels" />
+    <MESSAGE value="comment return;" />
+    <MESSAGE value="updated hotel" />
+    <MESSAGE value="updated hotel 9-2 to show to client." />
+    <MESSAGE value="check setting issue" />
+    <MESSAGE value="singer init" />
+    <option name="LAST_COMMIT_MESSAGE" value="singer init" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/templates/default/images/maintenance-bg.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/images/page-header.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/images/loading.gif">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/images/header-mail.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/images/marker.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/images/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/booking/booking/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="145" column="9" lean-forward="true" selection-start-line="145" selection-start-column="9" selection-end-line="145" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/langs/tr.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="269" column="10" selection-start-line="269" selection-start-column="10" selection-end-line="269" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/models/details.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="149" column="13" lean-forward="true" selection-start-line="149" selection-start-column="13" selection-end-line="149" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/define.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="674">
+          <caret line="281" column="23" lean-forward="true" selection-start-line="281" selection-start-column="23" selection-end-line="281" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/common/booking-popup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="120" column="69" lean-forward="true" selection-start-line="120" selection-start-column="69" selection-end-line="120" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/payments/_paypal.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/models/account.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/payments/paypal_notify.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1395">
+          <caret line="51" column="66" lean-forward="true" selection-start-line="51" selection-start-column="66" selection-end-line="51" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/lib.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="1297" column="106" selection-start-line="1297" selection-start-column="96" selection-end-line="1297" selection-end-column="106" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/common/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="328" column="154" selection-start-line="328" selection-start-column="154" selection-end-line="328" selection-end-column="154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/common/register/signup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="28" column="35" lean-forward="true" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="412" column="20" selection-start-line="412" selection-start-column="9" selection-end-line="412" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/default/models/payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="269" column="67" selection-start-line="269" selection-start-column="67" selection-end-line="269" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/inc_header_common.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-924" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/Module.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-951" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/fn_list.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/setup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1576">
+          <caret line="139" column="28" selection-start-line="139" selection-start-column="19" selection-end-line="139" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1716">
+          <folding>
+            <element signature="e#47#53#0" expanded="true" />
+            <element signature="e#53#59#0" expanded="true" />
+            <element signature="e#105#111#0" expanded="true" />
+            <element signature="e#114#120#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#7#13#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/fn_module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/booking/facility/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/default/list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/article/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="7" column="39" lean-forward="true" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/article/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/.TABLE_NAME_WITHOUT_PREFIX/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/.TABLE_NAME_WITHOUT_PREFIX/db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/.TABLE_NAME_WITHOUT_PREFIX/config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/booking/activity/config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/booking/activity/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/modules/booking/facility/config.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/inc_library.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2244" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/includes/inc_top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="n#li#1;n#ul#0;n#div#1;n#nav#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/settings.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/404.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/views/errors/404.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/vendor/pecee/simple-router/src/Pecee/SimpleRouter/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4105">
+          <caret line="299" selection-start-line="299" selection-end-line="299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/vendor/pecee/simple-router/src/Pecee/SimpleRouter/SimpleRouter.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/src/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/src/Application.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="87" column="20" selection-start-line="87" selection-start-column="20" selection-end-line="87" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/signer/src/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#7#26#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="67" lean-forward="true" selection-start-line="67" selection-end-line="67" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
