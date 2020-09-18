@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="c65aa432-60a2-4be2-a638-ddc1b3a0dc4d" name="log" url="http://23.235.227.135">
+        <fileTransfer host="23.235.227.135" port="22" rootFolder="/var/log/apache2" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

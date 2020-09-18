@@ -38,7 +38,7 @@
 
 body {
     font-family: Lato;
-    background: #F7F8FE;
+    background: #3d3d3d;
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -705,8 +705,8 @@ body.full-footer footer p {
 }
 
 .login-card {
-    background: #fff;
-    border-radius: 5px;
+    background: #dff2ff;
+    border-radius: 6px;
     padding: 25px;
     box-shadow: 0 10px 48px rgba(30, 107, 174, 0.1), 0 1px 1px rgba(255, 248, 254, 0.61);
     width: 400px;

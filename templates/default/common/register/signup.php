@@ -21,22 +21,12 @@ if(isset($_GET['token']) && isset($_GET['id']) && is_numeric($_GET['id'])){
             $_SESSION['user']['email'] = $row['email'];
             $_SESSION['user']['type'] = $row['type'];
 
-            $post_data=array(
-                "chain"=> "No",
-                "emails"=> [$row['email']],
-                "message"=> "Hiawatha Student Housing Lease Agreement",
-                "positions"=> ["[]"],
-                "duplicate"=> "No",
-                "docWidth"=> 867,
-                "document_key"=> Document_Key);
-//  "csrf-token": "678f229addd751aed147bf0f0d92336bf2c27b455186d2ae6fdc3535b4d329ba"
-
             $ch = curl_init();
 
-            curl_setopt($ch, CURLOPT_URL,Sign_Url);
+            curl_setopt($ch, CURLOPT_URL,'http://localhost/signer/requests/sendAgreement');
             curl_setopt($ch, CURLOPT_POST, 1);
 
-            curl_setopt($ch, CURLOPT_POSTFIELDS, "chain=No&emails=[\"".$row['email']."\"]&message=Hiawatha Student Housing Lease Agreement&positions=[\"[]\"]&duplicate=No&docWidth=867&document_key=hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx");
+            curl_setopt($ch, CURLOPT_POSTFIELDS, "chain=No&emails=[\"".$row['email']."\"]&message=Hiawatha Student Housing Lease Agreement&positions=[\"[]\"]&duplicate=No&docWidth=867&document_key=".Document_Key);
             curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/x-www-form-urlencoded'));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 

@@ -41,7 +41,7 @@ define('ADMIN_FOLDER', 'admin');
 define('CAPTCHA_PKEY', ''); // ReCAPTCHA public key
 define('CAPTCHA_SKEY', ''); // ReCAPTCHA secret key
 define('AUTOGEOLOCATE', '0'); // Change the currency according to the country (https required)
-define('PAYMENT_TYPE', 'Credit Card,paypal'); // 2checkout,paypal,check,arrival
+define('PAYMENT_TYPE', ''); // 2checkout,paypal,check,arrival
 define('PAYPAL_EMAIL', 'sb-jzu1x3230523@business.example.com');
 
 define('PAYMENT_TEST_MODE', '1');
@@ -55,7 +55,7 @@ define('ALLOW_COMMENTS', '1');
 define('ALLOW_RATINGS', '1'); // If comments enabled
 define('ENABLE_BOOKING_REQUESTS', '0'); // Possibility to make a reservation request if no availability
 define('CURRENCY_CONVERTER_KEY', ''); // currencyconverterapi.com API key
-define('ENABLE_ICAL', '1');
-define('ENABLE_AUTO_ICAL_SYNC', '1');
+define('ENABLE_ICAL', '0');
+define('ENABLE_AUTO_ICAL_SYNC', '0');
 define('ICAL_SYNC_INTERVAL', 'daily'); // daily | hourly
 define('ICAL_SYNC_CLOCK', '3'); // 0-23h mode, required if ICAL_SYNC_INTERVAL = daily

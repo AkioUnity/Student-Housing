@@ -49,7 +49,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <p class="pull-left m-t-5"><a href="" target="forgot-password">Forgot password?</a></p>
-                            <button class="btn btn-primary pull-right" type="submit" name="login">Sign In</button>
+                            <button class="btn btn-primary pull-right" type="submit" name="login">Login</button>
                         </div>
                     </div>
                 </div>

@@ -72,14 +72,14 @@ $csrf_token = get_token('login'); ?>
 <head>
     <?php include('includes/inc_header_common.php'); ?>
 </head>
-<body class="white">
+<body>
     <div class="container">
         <form id="form" class="form-horizontal" role="form" action="login.php" method="post">
             <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>">
             <div class="col-sm-3 col-md-4"></div>
             <div class="col-sm-6 col-md-4" id="loginWrapper">
                 <div id="logo">
-                    <img src="images/logo-admin.png">
+                    <img src="images/logo-admin.png" style="width: 100%">
                 </div>
                 <div id="login">
                     <div class="alert-container">

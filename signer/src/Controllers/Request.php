@@ -181,9 +181,9 @@ class Request{
     public function sendAgreement() {
         header('Content-type: application/json');
         $document = Database::table("files")->where("document_key", input("document_key"))->first();
-
+//        exit("OK");
         $emailjson = str_replace('&#34;', '"', $_POST['emails']);
-//        exit($emailjson);
+//        exit($_POST['emails']);
         $emails = json_decode($emailjson, true);
 
         $documentKey = $document->document_key;

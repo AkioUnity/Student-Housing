@@ -22,7 +22,10 @@ body.white {
     padding: 160px 0 0;
     position: relative;
 }
+
 #login {
+    background: #dff2ff;
+    border-radius: 6px;
     padding: 20px;
     border: 1px solid #ddd;
     box-shadow: 0 0 6px rgba(0,0,0,0.15);
@@ -121,6 +124,7 @@ textarea.form-control {
 }
 .btn:not(.btn-sm) {
     padding: 8px 15px;
+    border-radius: 4px;
 }
 .btn svg::before {
     margin-left: -0.2em;

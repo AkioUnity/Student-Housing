@@ -1,0 +1,27 @@
+POST https://holtz.biitsllc.com/signer/requests/sendAgreement/
+Content-Type: application/x-www-form-urlencoded
+
+chain=No&emails=["worklceo@gmail.com"]&message=Hiawatha Student Housing Lease Agreement&positions=["[]"]&duplicate=No&docWidth=867&document_key=hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx
+
+<> 2020-09-18T030628.200.json
+
+###
+
+POST https://holtz.biitsllc.com/signer/requests/sendAgreement/
+Content-Type: application/x-www-form-urlencoded
+
+chain=No&emails=["worklceo@gmail.com"]&message=Hiawatha Student Housing Lease Agreement&positions=["[]"]&duplicate=No&docWidth=867&document_key=hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx
+
+<> 2020-09-18T030410.200.json
+
+###
+
+POST https://holtz.biitsllc.com/signer/requests/sendAgreement/
+Content-Type: application/x-www-form-urlencoded
+
+chain=No&emails=["worklceo@gmail.com"]&message=Hiawatha Student Housing Lease Agreement&positions=["[]"]&duplicate=No&docWidth=867&document_key=hAeBmHkkgRC6550WEm7QHyo3nSv7g4rx
+
+<> 2020-09-18T030352.200.json
+
+###
+
