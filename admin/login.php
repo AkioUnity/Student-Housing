@@ -1,8 +1,12 @@
 <?php
+
 define('ADMIN', true);
 require_once('../common/lib.php');
 require_once('../common/define.php');
 define('TITLE_ELEMENT', $texts['DASHBOARD'].' - '.$texts['LOGIN']);
+
+
+require ('../signer/src/helpers.php');
 
 $action = (isset($_GET['action'])) ? $_GET['action'] : '';
 
@@ -30,6 +34,10 @@ if($db !== false && isset($_POST['login'])){
             $_SESSION['user']['email'] = $row['email'];
             $_SESSION['user']['type'] = $row['type'];
             $_SESSION['user']['add_date'] = $row['add_date'];
+//signer login
+
+            $_SESSION['signer_user'] = 1;
+
             header('Location: index.php');
             exit();
         }else

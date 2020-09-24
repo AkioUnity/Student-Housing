@@ -237,50 +237,50 @@ $csrf_token = get_token('list'); ?>
 						if(!in_array('no_access', $permissions)){ ?>
                             <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>"/>
                             <div class="panel panel-default">
-                                <div class="panel-heading form-inline clearfix">
-                                    <div class="row">
-                                        <div class="col-md-6 text-left">
-                                            <div class="form-inline">
-                                                <input type="text" name="q_search" value="<?php echo $q_search; ?>" class="form-control input-sm" placeholder="<?php echo $texts['SEARCH']; ?>..."/>
-                                                <?php displayFilters($filters); ?>
-                                                <button class="btn btn-default btn-sm" type="submit" id="search" name="search"><i class="fas fa-fw fa-search"></i> <?php echo $texts['SEARCH']; ?></button>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 text-right">
-                                            <div class="input-group">
-                                                <div class="input-group-addon"><i class="fas fa-fw fa-th-list"></i> <?php echo $texts['DISPLAY']; ?></div>
-                                                <select class="select-url form-control input-sm">
-                                                    <?php
-                                                    echo ($limit != 20) ? '<option value="index.php?view=list&limit=20">20</option>' : '<option selected="selected">20</option>';
-                                                    echo ($limit != 50) ? '<option value="index.php?view=list&limit=50">50</option>' : '<option selected="selected">50</option>';
-                                                    echo ($limit != 100) ? '<option value="index.php?view=list&limit=100">100</option>' : '<option selected="selected">100</option>'; ?>
-                                                </select>
-                                            </div>
-                                            <?php
-                                            if($limit > 0){
-                                                $nb_pages = ceil($total/$limit);
-                                                if($nb_pages > 1){ ?>
-                                                    <div class="input-group">
-                                                        <div class="input-group-addon"><?php echo $texts['PAGE']; ?></div>
-                                                        <select class="select-url form-control input-sm">
-                                                            <?php
-
-                                                            for($i = 1; $i <= $nb_pages; $i++){
-                                                                $offset2 = ($i-1)*$limit;
-                                                                
-                                                                if($offset2 == $offset)
-                                                                    echo '<option value="" selected="selected">'.$i.'</option>';
-                                                                else
-                                                                    echo '<option value="index.php?view=list&offset='.$offset2.'">'.$i.'</option>';
-                                                            } ?>
-                                                        </select>
-                                                    </div>
-                                                    <?php
-                                                }
-                                            } ?>
-                                        </div>
-                                    </div>
-                                </div>
+<!--                                <div class="panel-heading form-inline clearfix">-->
+<!--                                    <div class="row">-->
+<!--                                        <div class="col-md-6 text-left">-->
+<!--                                            <div class="form-inline">-->
+<!--                                                <input type="text" name="q_search" value="--><?php //echo $q_search; ?><!--" class="form-control input-sm" placeholder="--><?php //echo $texts['SEARCH']; ?><!--..."/>-->
+<!--                                                --><?php //displayFilters($filters); ?>
+<!--                                                <button class="btn btn-default btn-sm" type="submit" id="search" name="search"><i class="fas fa-fw fa-search"></i> --><?php //echo $texts['SEARCH']; ?><!--</button>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="col-md-6 text-right">-->
+<!--                                            <div class="input-group">-->
+<!--                                                <div class="input-group-addon"><i class="fas fa-fw fa-th-list"></i> --><?php //echo $texts['DISPLAY']; ?><!--</div>-->
+<!--                                                <select class="select-url form-control input-sm">-->
+<!--                                                    --><?php
+//                                                    echo ($limit != 20) ? '<option value="index.php?view=list&limit=20">20</option>' : '<option selected="selected">20</option>';
+//                                                    echo ($limit != 50) ? '<option value="index.php?view=list&limit=50">50</option>' : '<option selected="selected">50</option>';
+//                                                    echo ($limit != 100) ? '<option value="index.php?view=list&limit=100">100</option>' : '<option selected="selected">100</option>'; ?>
+<!--                                                </select>-->
+<!--                                            </div>-->
+<!--                                            --><?php
+//                                            if($limit > 0){
+//                                                $nb_pages = ceil($total/$limit);
+//                                                if($nb_pages > 1){ ?>
+<!--                                                    <div class="input-group">-->
+<!--                                                        <div class="input-group-addon">--><?php //echo $texts['PAGE']; ?><!--</div>-->
+<!--                                                        <select class="select-url form-control input-sm">-->
+<!--                                                            --><?php
+//
+//                                                            for($i = 1; $i <= $nb_pages; $i++){
+//                                                                $offset2 = ($i-1)*$limit;
+//
+//                                                                if($offset2 == $offset)
+//                                                                    echo '<option value="" selected="selected">'.$i.'</option>';
+//                                                                else
+//                                                                    echo '<option value="index.php?view=list&offset='.$offset2.'">'.$i.'</option>';
+//                                                            } ?>
+<!--                                                        </select>-->
+<!--                                                    </div>-->
+<!--                                                    --><?php
+//                                                }
+//                                            } ?>
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
                                 <div class="panel-body">
                                     <div class="table-responsive">
                                         <table class="table table-hover table-striped" id="listing_base">
@@ -587,7 +587,7 @@ $csrf_token = get_token('list'); ?>
                                                                     <?php
                                                                 }
                                                                 if(in_array('delete', $permissions) || in_array('all', $permissions)){ ?>
-                                                                    <a class="tips" href="javascript:if(confirm('<?php echo $texts['DELETE_CONFIRM2']; ?>')) window.location = 'index.php?view=list&id=<?php echo $id; ?>&csrf_token=<?php echo $csrf_token; ?>&action=delete';" title="<?php echo $texts['DELETE']; ?>"><i class="fas fa-fw fa-trash-alt text-danger"></i></a>
+<!--                                                                    <a class="tips" href="javascript:if(confirm('--><?php //echo $texts['DELETE_CONFIRM2']; ?><!--')) window.location = 'index.php?view=list&id=--><?php //echo $id; ?><!--&csrf_token=--><?php //echo $csrf_token; ?><!--&action=delete';" title="--><?php //echo $texts['DELETE']; ?><!--"><i class="fas fa-fw fa-trash-alt text-danger"></i></a>-->
                                                                     <?php
                                                                 } ?>
                                                             </td>

@@ -356,10 +356,10 @@ $csrf_token = get_token('settings'); ?>
                         <ul class="nav nav-tabs pt5">
                             <?php
                             if($_SESSION['user']['type'] == 'administrator'){ ?>
-                                <li class="active"><a data-toggle="tab" href="#general"><i class="fas fa-fw fa-cog"></i> <?php echo $texts['GENERAL']; ?></a></li>
+<!--                                <li class="active"><a data-toggle="tab" href="#general"><i class="fas fa-fw fa-cog"></i> --><?php //echo $texts['GENERAL']; ?><!--</a></li>-->
                                 <li><a data-toggle="tab" href="#contact"><i class="fas fa-fw fa-phone-square"></i> <?php echo $texts['CONTACT']; ?></a></li>
-                                <li><a data-toggle="tab" href="#database"><i class="fas fa-fw fa-database"></i> <?php echo $texts['DATABASE']; ?></a></li>
-                                <li><a data-toggle="tab" href="#email_settings"><i class="fas fa-fw fa-envelope"></i> <?php echo $texts['EMAIL_SETTINGS']; ?></a></li>
+<!--                                <li><a data-toggle="tab" href="#database"><i class="fas fa-fw fa-database"></i> --><?php //echo $texts['DATABASE']; ?><!--</a></li>-->
+<!--                                <li><a data-toggle="tab" href="#email_settings"><i class="fas fa-fw fa-envelope"></i> --><?php //echo $texts['EMAIL_SETTINGS']; ?><!--</a></li>-->
                                 <?php
                             } ?>
                             <li <?php if($_SESSION['user']['type'] != 'administrator') echo ' class="active"'; ?>>
@@ -367,7 +367,7 @@ $csrf_token = get_token('settings'); ?>
                             </li>
                             <?php
                             if($_SESSION['user']['type'] == 'administrator'){ ?>
-                                <li><a data-toggle="tab" href="#booking"><i class="fas fa-fw fa-calendar"></i> <?php echo $texts['BOOKING']; ?></a></li>
+<!--                                <li><a data-toggle="tab" href="#booking"><i class="fas fa-fw fa-calendar"></i> --><?php //echo $texts['BOOKING']; ?><!--</a></li>-->
                                 <li><a data-toggle="tab" href="#payment"><i class="fas fa-fw fa-credit-card"></i> <?php echo $texts['PAYMENT']; ?></a></li>
                                 <?php
                             } ?>
@@ -420,7 +420,7 @@ $csrf_token = get_token('settings'); ?>
                                 </div>
                                 <?php
                                 if($_SESSION['user']['type'] == 'administrator'){ ?>
-                                    <div id="general" class="tab-pane fade in active">
+                                    <div id="general" class="tab-pane fade ">
                                         <div class="row mb10">
                                             <div class="col-md-8">
                                                 <div class="row">
@@ -782,7 +782,7 @@ $csrf_token = get_token('settings'); ?>
                                             </div>
                                         </div>
                                     </div>
-                                    <div id="contact" class="tab-pane fade">
+                                    <div id="contact" class="tab-pane fade in active">
                                         <div class="row mb10">
                                             <div class="col-md-8">
                                                 <div class="row">

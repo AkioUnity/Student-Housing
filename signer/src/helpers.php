@@ -153,6 +153,8 @@ if (! function_exists('session')) {
      */
     function session($key = null, $value = null) {
         $session = container(Session::class);
+//        print_r($session);
+//        die;
         if ( is_null($key) ) {
             return $session;
         } else if ( is_null($value) ) {

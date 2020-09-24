@@ -37,7 +37,7 @@ class Auth{
 		    input('password'), 
 		    array(
 		        "rememberme" => true,
-		        "redirect" => url(""),
+		        "redirect" => url("../admin"),
 		        "status" => "Active"
 		    )
 		);

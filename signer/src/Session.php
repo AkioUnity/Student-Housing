@@ -9,7 +9,7 @@ class Session {
      * @return  void
      */
     public function __construct() {
-        session_name(Config::get('session.name'));
+//        session_name(Config::get('session.name'));
         if(session_status() !== PHP_SESSION_ACTIVE) {
             ini_set( 'session.cookie_httponly', 1 );
             /*ini_set( 'session.use_strict_mode', 1 );

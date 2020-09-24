@@ -155,8 +155,9 @@ Router::csrfVerifier(new BaseCsrfVerifier());
 
             /**
              * No login Required pages
-             **/ 
-            Router::get('/signin', 'Auth@get');
+             **/
+//            Router::get('/signin', 'Auth@get');
+            Router::get('../admin', 'Auth@get');
             Router::post('/signin/validate', 'Auth@signin');
             Router::post('/forgot', 'Auth@forgot');
             Router::get('/reset/{token}', 'Auth@getreset', ['as' => 'token']);

@@ -17,24 +17,24 @@
 		<field multi="1" label="[TITLE]" name="title" type="text" required="1" unique="0" validation="none"/>
 		<field multi="1" label="[SUBTITLE]" name="subtitle" type="text" required="1" unique="0" validation="none"/>
 		<field multi="1" label="[ALIAS]" name="alias" type="alias" required="1" unique="1" validation="none"/>
-		<field multi="0" label="[MAX_CHILDREN]" name="max_children" type="select" required="1" unique="0" validation="numeric">
-            <options>
-                <min>0</min>
-                <max>20</max>
-            </options>
-        </field>
+		<!--<field multi="0" label="[MAX_CHILDREN]" name="max_children" type="select" required="1" unique="0" validation="numeric">-->
+            <!--<options>-->
+                <!--<min>0</min>-->
+                <!--<max>20</max>-->
+            <!--</options>-->
+        <!--</field>-->
 		<field multi="0" label="[MAX_ADULTS]" name="max_adults" type="select" required="1" unique="0" validation="numeric">
             <options>
                 <min>1</min>
                 <max>20</max>
             </options>
         </field>
-		<field multi="0" label="[MAX_PEOPLE]" name="max_people" type="select" required="1" unique="0" validation="numeric">
-            <options>
-                <min>1</min>
-                <max>20</max>
-            </options>
-        </field>
+		<!--<field multi="0" label="[MAX_PEOPLE]" name="max_people" type="select" required="1" unique="0" validation="numeric">-->
+            <!--<options>-->
+                <!--<min>1</min>-->
+                <!--<max>20</max>-->
+            <!--</options>-->
+        <!--</field>-->
 		<field multi="0" label="[MIN_PEOPLE]" name="min_people" type="select" required="1" unique="0" validation="numeric">
             <options>
                 <min>1</min>
@@ -52,31 +52,31 @@
 			<field multi="0" label="[END_DATE]" name="to_date" type="date" required="1" unique="0" validation="none"/>
 			<field multi="0" label="[NUMBER_OF_ROOMS]" name="stock" type="text" required="1" unique="0" validation="numeric"/>
         </table>
-        <table label="[EXTERNAL_ICAL_CALENDARS]" name="room_calendar" fieldref="id_room" multi="0">
-			<field multi="0" label="[TITLE]" name="title" type="text" required="0" unique="0" validation="none">
-				<options>
-					<option value="Abritel">Abritel</option>
-					<option value="Agoda">Agoda</option>
-					<option value="Airbnb">Airbnb</option>
-					<option value="Booking.com">Booking.com</option>
-					<option value="eDreams">eDreams</option>
-					<option value="Expedia">Expedia</option>
-					<option value="Google Hotel Ads">Google Hotel Ads</option>
-					<option value="Hotels.com">Hotels.com</option>
-					<option value="HomeAway">HomeAway</option>
-					<option value="Lastminute.com">Lastminute.com</option>
-					<option value="Laterooms">Laterooms</option>
-					<option value="Locatour">Locatour</option>
-					<option value="Orbitz">Orbitz</option>
-					<option value="Priceline">Priceline</option>
-					<option value="Travelocity">Travelocity</option>
-					<option value="Trip.com">Trip.com</option>
-					<option value="Tripadvisor">Tripadvisor</option>
-				</options>
-			</field>
-			<field multi="0" label="[URL]" name="url" type="text" required="1" unique="0" validation="none"/>
-			<field multi="0" label="[LATEST_SYNC]" name="latest_sync" type="date" required="0" active="0" unique="0" validation="none"/>
-        </table>
+        <!--<table label="[EXTERNAL_ICAL_CALENDARS]" name="room_calendar" fieldref="id_room" multi="0">-->
+			<!--<field multi="0" label="[TITLE]" name="title" type="text" required="0" unique="0" validation="none">-->
+				<!--<options>-->
+					<!--<option value="Abritel">Abritel</option>-->
+					<!--<option value="Agoda">Agoda</option>-->
+					<!--<option value="Airbnb">Airbnb</option>-->
+					<!--<option value="Booking.com">Booking.com</option>-->
+					<!--<option value="eDreams">eDreams</option>-->
+					<!--<option value="Expedia">Expedia</option>-->
+					<!--<option value="Google Hotel Ads">Google Hotel Ads</option>-->
+					<!--<option value="Hotels.com">Hotels.com</option>-->
+					<!--<option value="HomeAway">HomeAway</option>-->
+					<!--<option value="Lastminute.com">Lastminute.com</option>-->
+					<!--<option value="Laterooms">Laterooms</option>-->
+					<!--<option value="Locatour">Locatour</option>-->
+					<!--<option value="Orbitz">Orbitz</option>-->
+					<!--<option value="Priceline">Priceline</option>-->
+					<!--<option value="Travelocity">Travelocity</option>-->
+					<!--<option value="Trip.com">Trip.com</option>-->
+					<!--<option value="Tripadvisor">Tripadvisor</option>-->
+				<!--</options>-->
+			<!--</field>-->
+			<!--<field multi="0" label="[URL]" name="url" type="text" required="1" unique="0" validation="none"/>-->
+			<!--<field multi="0" label="[LATEST_SYNC]" name="latest_sync" type="date" required="0" active="0" unique="0" validation="none"/>-->
+        <!--</table>-->
 	</form>
     <roles>
         <user type="administrator" permissions="all"/>

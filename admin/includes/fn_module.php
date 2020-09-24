@@ -99,7 +99,7 @@ if(isset($indexes[$dirname])){
     define('RANKING', $module->isRanking());
     define('HOME', $module->isHome());
     define('MAIN', $module->isMain());
-    define('VALIDATION', $module->isValidation());
+    define('VALIDATION', false);//$module->isValidation());
     define('DATES', $module->isDates());
     define('RELEASE', $module->isRelease());
     define('NB_FILES', $module->getMaxMedias());

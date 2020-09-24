@@ -5,6 +5,7 @@ require_once("../common/define.php");
 define("TITLE_ELEMENT", $texts['DASHBOARD']);
 
 if(!isset($_SESSION['user'])){
+//    header("Location: ../signer/signin/?secure=true");
     header("Location: login.php");
     exit();
 }elseif($_SESSION['user']['type'] == "registered"){
